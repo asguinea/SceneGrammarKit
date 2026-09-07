@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "repeat_example",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "repeat_root",
+    "type": "repeat",
+    "axis": "z",
+    "count": 4,
+    "spacing": 0.1,
+    "element": {
+      "node_id": "car",
+      "type": "terminal",
+      "semantic_class": "car",
+      "geometry": "box"
+    }
+  }
+}

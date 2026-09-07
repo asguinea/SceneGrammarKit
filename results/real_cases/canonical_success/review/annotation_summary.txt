@@ -1,0 +1,60 @@
+SceneGrammarKit annotation review
+============================
+Scene: open_images_reselection_736a482693c18962
+Image: 736a482693c18962
+Source dimensions: 1024 x 683 pixels
+Annotations: regions=6, instances=5, repeat_groups=1
+
+Depth-zone breakdown
+--------------------
+- background: 1
+- foreground: 1
+- midground: 9
+
+Semantic-class breakdown
+------------------------
+- facade: 4
+- foreground: 1
+- sky: 1
+- window: 5
+
+Repeat groups (supplied order)
+------------------------------
+- facade_windows: axis=x; members=window_1,window_2,window_3,window_4,window_5
+
+Region hierarchy
+----------------
+- foreground_ground
+- facade_layout
+  - parapet
+  - window_band
+  - facade_base
+- sky
+
+Supplied split-axis hints
+-------------------------
+- facade_layout: axis=y
+
+Warnings
+--------
+- none
+
+Supplied information
+--------------------
+- semantic regions
+- object instances
+- foreground/midground/background assignments
+- parent-region relationships
+- split-axis hints
+- repeat-group membership
+- repeat-axis hints
+- repeat-member ordering
+- annotation identifiers
+
+Not inferred in this artifact
+-----------------------------
+- inferred depth
+- inferred split boundaries
+- inferred repeat spacing
+- inferred grammar
+- reconstructed geometry

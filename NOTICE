@@ -1,0 +1,11 @@
+SceneGrammarKit
+Copyright 2026 SceneGrammarKit contributors
+
+The source repository includes selected photographs from Open Images. These
+photographs are distributed under their individual Creative Commons
+Attribution 2.0 licenses and are not covered by the Apache License 2.0.
+Authors, source pages, file hashes, and license links are recorded in
+results/phase2_acceptance/ATTRIBUTION.md.
+
+The Open Images annotation license is Creative Commons Attribution 4.0.
+Additional details are recorded in datasets/open_images/LICENSE_NOTES.md.

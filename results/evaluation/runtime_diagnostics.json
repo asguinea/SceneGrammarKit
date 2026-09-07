@@ -1,0 +1,199 @@
+{
+  "canonical": false,
+  "description": "Machine-specific constructor runtimes; excluded from canonical hashing and evaluation aggregates.",
+  "diagnostics": {
+    "corridor_01": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.0767711999360472,
+        "execution_export_seconds": 0.08479829994030297,
+        "lifting_seconds": 0.0010128000285476446,
+        "rendering_seconds": 0.07325960020534694,
+        "repeat_induction_seconds": 0.0034480998292565346,
+        "review_seconds": 5.699926987290382e-06,
+        "split_induction_seconds": 0.003812100039795041,
+        "total_seconds": 0.23364720004610717
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "corridor_02": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.07577520003542304,
+        "execution_export_seconds": 0.09840149991214275,
+        "lifting_seconds": 0.0009663999080657959,
+        "rendering_seconds": 0.08169120014645159,
+        "repeat_induction_seconds": 0.006485800025984645,
+        "review_seconds": 3.500143066048622e-06,
+        "split_induction_seconds": 0.003514499869197607,
+        "total_seconds": 0.2514162000734359
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "corridor_03": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.08358990005217493,
+        "execution_export_seconds": 0.09228350012563169,
+        "lifting_seconds": 0.0014747001696377993,
+        "rendering_seconds": 0.08764180005528033,
+        "repeat_induction_seconds": 0.005155900027602911,
+        "review_seconds": 8.600065484642982e-06,
+        "split_induction_seconds": 0.0038284999318420887,
+        "total_seconds": 0.259391900151968
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "corridor_04": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.09151469985954463,
+        "execution_export_seconds": 0.10243329987861216,
+        "lifting_seconds": 0.001123500056564808,
+        "rendering_seconds": 0.09620560007169843,
+        "repeat_induction_seconds": 0.00563289993442595,
+        "review_seconds": 4.299916326999664e-06,
+        "split_induction_seconds": 0.005198400001972914,
+        "total_seconds": 0.2855356000363827
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "facade_01": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.06932200002484024,
+        "execution_export_seconds": 0.09292820002883673,
+        "lifting_seconds": 0.001267199870198965,
+        "rendering_seconds": 0.0707137999124825,
+        "repeat_induction_seconds": 0.00531500019133091,
+        "review_seconds": 6.800051778554916e-06,
+        "split_induction_seconds": 0.005233799805864692,
+        "total_seconds": 0.23587549990043044
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "facade_02": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.06845650007016957,
+        "execution_export_seconds": 0.11091639986261725,
+        "lifting_seconds": 0.001334100030362606,
+        "rendering_seconds": 0.07586040021851659,
+        "repeat_induction_seconds": 0.00399450003169477,
+        "review_seconds": 7.899943739175797e-06,
+        "split_induction_seconds": 0.003896299982443452,
+        "total_seconds": 0.25114269996993244
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "facade_03": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.07460450008511543,
+        "execution_export_seconds": 0.09801930002868176,
+        "lifting_seconds": 0.0011332000140100718,
+        "rendering_seconds": 0.08579950011335313,
+        "repeat_induction_seconds": 0.004680600017309189,
+        "review_seconds": 5.00003807246685e-06,
+        "split_induction_seconds": 0.0042669998947530985,
+        "total_seconds": 0.25839169998653233
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "facade_04": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.07187759992666543,
+        "execution_export_seconds": 0.096266700187698,
+        "lifting_seconds": 0.0014032998587936163,
+        "rendering_seconds": 0.0829999998677522,
+        "repeat_induction_seconds": 0.004768399987369776,
+        "review_seconds": 7.800059393048286e-06,
+        "split_induction_seconds": 0.00587160000577569,
+        "total_seconds": 0.2502961999271065
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "street_01": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.06784989987500012,
+        "execution_export_seconds": 1.151625899830833,
+        "lifting_seconds": 0.0010269000194966793,
+        "rendering_seconds": 0.06832580012269318,
+        "repeat_induction_seconds": 0.0033202001359313726,
+        "review_seconds": 5.200039595365524e-06,
+        "split_induction_seconds": 0.0035745000932365656,
+        "total_seconds": 1.2953708001878113
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "street_02": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.06919299997389317,
+        "execution_export_seconds": 0.08428589976392686,
+        "lifting_seconds": 0.0010615000501275063,
+        "rendering_seconds": 0.06731150019913912,
+        "repeat_induction_seconds": 0.004083399893715978,
+        "review_seconds": 7.800059393048286e-06,
+        "split_induction_seconds": 0.003435299964621663,
+        "total_seconds": 0.21899419999681413
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "street_03": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.07707460015080869,
+        "execution_export_seconds": 0.0930499997921288,
+        "lifting_seconds": 0.0011608998756855726,
+        "rendering_seconds": 0.07456480013206601,
+        "repeat_induction_seconds": 0.004753799876198173,
+        "review_seconds": 4.800036549568176e-06,
+        "split_induction_seconds": 0.003909100079908967,
+        "total_seconds": 0.24635150004178286
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    },
+    "street_04": {
+      "canonical": false,
+      "constructor_runtime_seconds": {
+        "editing_seconds": 0.0793163999915123,
+        "execution_export_seconds": 0.09589409991167486,
+        "lifting_seconds": 0.0019090999849140644,
+        "rendering_seconds": 0.08708979981020093,
+        "repeat_induction_seconds": 0.006005499977618456,
+        "review_seconds": 5.600042641162872e-06,
+        "split_induction_seconds": 0.00462549994699657,
+        "total_seconds": 0.25778189999982715
+      },
+      "machine_specific": true,
+      "platform": "Windows-11-10.0.26200-SP0",
+      "python_version": "3.14.3"
+    }
+  },
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]"
+}

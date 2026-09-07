@@ -1,0 +1,76 @@
+"""Public deterministic grammar-editing API."""
+
+from scene_grammar_kit.editing.editor import apply_edit, apply_edits
+from scene_grammar_kit.editing.errors import (
+    EditChildNotFoundError,
+    EditError,
+    EditExecutionError,
+    EditFileExistsError,
+    EditPersistenceError,
+    EditSerializationError,
+    EditTargetNotFoundError,
+    EditTargetTypeError,
+    EditValidationError,
+    EditWriteError,
+    InvalidEditValueError,
+)
+from scene_grammar_kit.editing.operations import (
+    EDITING_POLICY_VERSION,
+    EditOperation,
+    SetRepeatCount,
+    SetRepeatSpacing,
+    SetSplitChildWeight,
+    SubstituteTerminalClass,
+)
+from scene_grammar_kit.editing.persistence import (
+    edit_operation_to_canonical_json,
+    edit_report_to_canonical_json,
+    save_edit_report,
+    save_edit_result,
+)
+from scene_grammar_kit.editing.reports import (
+    EditRealization,
+    EditReport,
+    EditResult,
+    GeometryDiff,
+    RepeatCountRealization,
+    RepeatSpacingRealization,
+    SplitWeightRealization,
+    SymbolicDiff,
+    TerminalSubstitutionRealization,
+)
+
+__all__ = [
+    "EDITING_POLICY_VERSION",
+    "EditChildNotFoundError",
+    "EditError",
+    "EditExecutionError",
+    "EditFileExistsError",
+    "EditOperation",
+    "EditPersistenceError",
+    "EditRealization",
+    "EditReport",
+    "EditResult",
+    "EditSerializationError",
+    "EditTargetNotFoundError",
+    "EditTargetTypeError",
+    "EditValidationError",
+    "EditWriteError",
+    "GeometryDiff",
+    "InvalidEditValueError",
+    "RepeatCountRealization",
+    "RepeatSpacingRealization",
+    "SetRepeatCount",
+    "SetRepeatSpacing",
+    "SetSplitChildWeight",
+    "SplitWeightRealization",
+    "SubstituteTerminalClass",
+    "SymbolicDiff",
+    "TerminalSubstitutionRealization",
+    "apply_edit",
+    "apply_edits",
+    "edit_operation_to_canonical_json",
+    "edit_report_to_canonical_json",
+    "save_edit_report",
+    "save_edit_result",
+]

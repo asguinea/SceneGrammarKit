@@ -1,0 +1,24 @@
+{
+  "case_definition_version": "0.1",
+  "case_id": "corridor_04",
+  "expected": {
+    "instance_count": 6,
+    "key_split_boundaries": [0.24, 0.76],
+    "region_count": 6,
+    "repeat_member_ids": ["light_1", "light_2", "light_3", "light_4", "light_5", "light_6"],
+    "repeat_count": 6,
+    "repeat_decision": "rejected_fallback",
+    "required_edit_outcome": "applied",
+    "valid_construction_outcome": true
+  },
+  "family": "indoor_corridor",
+  "parameters": {
+    "partition_axis": "y",
+    "partition_boundaries": [0.24, 0.76],
+    "repeat_axis": "y",
+    "repeat_cross_interval": [0.4, 0.6],
+    "repeat_member_extent": 0.05,
+    "repeat_spacing": 0.03,
+    "repeat_start": 0.26
+  }
+}

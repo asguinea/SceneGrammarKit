@@ -1,0 +1,52 @@
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+env/
+
+# Builds and packaging
+build/
+dist/
+*.egg-info/
+
+# Local outputs and temporary artifacts
+runs/
+.local-temp/
+.cache/open_images/
+render_tmp/
+tmp/
+temp/
+
+# Large local data and model files
+data/
+datasets/*
+!datasets/open_images/
+datasets/open_images/*
+!datasets/open_images/README.md
+!datasets/open_images/LICENSE_NOTES.md
+!datasets/open_images/selection_protocol.md
+!datasets/open_images/frozen_cases.json
+*.ckpt
+*.onnx
+*.pth
+*.pt
+*.safetensors
+
+# Editors and operating systems
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Local visual references (not project artifacts)
+/sample_*.pdf

@@ -1,0 +1,29 @@
+{
+  "manifest_version": "0.1",
+  "scene_key": "repeated_facade",
+  "display_name": "Repeated Facade",
+  "grammar_path": "grammar.json",
+  "description": "A front-facing facade with a lower entrance band, side piers, a limited-height repeated window band, and an upper parapet.",
+  "supported_camera_presets": ["front", "isometric"],
+  "primary_camera": "front",
+  "secondary_camera": "isometric",
+  "primary_render_width": 1200,
+  "primary_render_height": 800,
+  "canonical_edits": [
+    {
+      "edit_key": "more_windows",
+      "operation_type": "set_repeat_count",
+      "parameters": {
+        "repeat_node_id": "repeated_windows",
+        "new_count": 8
+      },
+      "purpose": "Increase the window-module count from five to eight while preserving facade bounds.",
+      "primary_example_edit": true,
+      "recommended_render_camera": "front"
+    }
+  ],
+  "expected_semantic_classes": ["door", "facade", "wall", "window"],
+  "expected_split_node_ids": ["facade_vertical_bands", "lower_base_layout", "window_band_layout"],
+  "expected_repeat_node_ids": ["repeated_windows"],
+  "known_limitations": ["Windows and entrance elements are solid colored cuboid proxies without glazing, frames, or texture."]
+}

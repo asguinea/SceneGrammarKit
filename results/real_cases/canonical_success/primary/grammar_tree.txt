@@ -1,0 +1,64 @@
+Scene open_images_reselection_736a482693c18962 [schema=0.1, units=normalized]
+Bounds min=(0,0,0) max=(1,1,1)
+root: Split id=induced_scene_depth_zones axis=z
+  child[0] weight=0.2
+    node: Split id=induced_zone_foreground axis=y
+      child[0] weight=0.12
+        node: Terminal id=induced_region_foreground_ground class=foreground geometry=empty
+      child[1] weight=0.88
+        node: Terminal id=induced_gap_foreground_ground_y_1 class=empty_space geometry=empty
+  child[1] weight=0.6
+    node: Split id=induced_zone_midground axis=x
+      child[0] weight=0.59
+        node: Split id=induced_wrapper_facade_layout_y_15 axis=y
+          child[0] weight=0.17
+            node: Terminal id=induced_gap_facade_layout_y_2 class=empty_space geometry=empty
+          child[1] weight=0.75
+            node: Split id=induced_split_facade_layout_y_2 axis=y
+              child[0] weight=0.13
+                node: Split id=induced_wrapper_facade_base_x_2 axis=x
+                  child[0] weight=0.02
+                    node: Terminal id=induced_gap_facade_base_x_3 class=empty_space geometry=empty
+                  child[1] weight=0.57
+                    node: Terminal id=induced_region_facade_base class=facade geometry=box
+              child[1] weight=0.52
+                node: Split id=induced_wrapper_window_band_x_13 axis=x
+                  child[0] weight=0.02
+                    node: Terminal id=induced_gap_window_band_x_4 class=empty_space geometry=empty
+                  child[1] weight=0.57
+                    node: Split id=induced_split_window_band_x_1 axis=x
+                      child[0] weight=0.04
+                        node: Terminal id=induced_region_window_band_fragment_1 class=facade geometry=empty
+                      child[1] weight=0.465
+                        node: Split id=induced_repeat_wrapper_facade_windows_y axis=y
+                          child[0] weight=0.36
+                            node: Terminal id=induced_repeat_filler_facade_windows_y_0 class=facade geometry=empty
+                          child[1] weight=0.1
+                            node: Split id=induced_repeat_wrapper_facade_windows_z axis=z
+                              child[0] weight=0.381
+                                node: Terminal id=induced_repeat_filler_facade_windows_z_0 class=facade geometry=empty
+                              child[1] weight=0.03
+                                node: Repeat id=induced_repeat_facade_windows axis=x count=5 spacing=0.035
+                                  element: Terminal id=induced_repeat_element_facade_windows class=window geometry=box
+                              child[2] weight=0.189
+                                node: Terminal id=induced_repeat_filler_facade_windows_z_2 class=facade geometry=empty
+                          child[2] weight=0.0600000000000001
+                            node: Terminal id=induced_repeat_filler_facade_windows_y_2 class=facade geometry=empty
+                      child[2] weight=0.0649999999999999
+                        node: Terminal id=induced_region_window_band_fragment_26 class=facade geometry=empty
+              child[2] weight=0.1
+                node: Split id=induced_wrapper_parapet_x_14 axis=x
+                  child[0] weight=0.02
+                    node: Terminal id=induced_gap_parapet_x_5 class=empty_space geometry=empty
+                  child[1] weight=0.57
+                    node: Terminal id=induced_region_parapet class=facade geometry=box
+          child[2] weight=0.08
+            node: Terminal id=induced_gap_facade_layout_y_6 class=empty_space geometry=empty
+      child[1] weight=0.41
+        node: Terminal id=induced_gap_facade_layout_x_7 class=empty_space geometry=empty
+  child[2] weight=0.2
+    node: Split id=induced_zone_background axis=y
+      child[0] weight=0.78
+        node: Terminal id=induced_gap_sky_y_8 class=empty_space geometry=empty
+      child[1] weight=0.22
+        node: Terminal id=induced_region_sky class=sky geometry=plane

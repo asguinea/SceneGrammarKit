@@ -1,0 +1,132 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "editable_urban",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "type": "split",
+    "node_id": "scene_depth_zones",
+    "axis": "z",
+    "children": [
+      {
+        "weight": 1,
+        "node": {
+          "type": "terminal",
+          "node_id": "foreground_empty",
+          "semantic_class": "foreground",
+          "geometry": "empty"
+        }
+      },
+      {
+        "weight": 6,
+        "node": {
+          "type": "split",
+          "node_id": "midground_layout",
+          "axis": "x",
+          "children": [
+            {
+              "weight": 2,
+              "node": {
+                "type": "terminal",
+                "node_id": "left_sidewalk",
+                "semantic_class": "sidewalk",
+                "geometry": "box"
+              }
+            },
+            {
+              "weight": 5,
+              "node": {
+                "type": "split",
+                "node_id": "road_region",
+                "axis": "y",
+                "children": [
+                  {
+                    "weight": 2,
+                    "node": {
+                      "type": "terminal",
+                      "node_id": "road_surface",
+                      "semantic_class": "road",
+                      "geometry": "box"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "node": {
+                      "type": "split",
+                      "node_id": "car_layer_layout",
+                      "axis": "x",
+                      "children": [
+                        {
+                          "weight": 1,
+                          "node": {
+                            "type": "terminal",
+                            "node_id": "street_tree",
+                            "semantic_class": "tree",
+                            "geometry": "box",
+                            "attributes": {
+                              "role": "street_furniture",
+                              "variant": "proxy_deciduous"
+                            }
+                          }
+                        },
+                        {
+                          "weight": 4,
+                          "node": {
+                            "type": "repeat",
+                            "node_id": "parked_cars",
+                            "axis": "z",
+                            "count": 4,
+                            "spacing": 0.06,
+                            "element": {
+                              "type": "terminal",
+                              "node_id": "parked_car",
+                              "semantic_class": "car",
+                              "geometry": "box",
+                              "attributes": {
+                                "role": "parked_vehicle"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "weight": 5,
+                    "node": {
+                      "type": "terminal",
+                      "node_id": "road_air",
+                      "semantic_class": "air",
+                      "geometry": "empty"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "weight": 2,
+              "node": {
+                "type": "terminal",
+                "node_id": "right_sidewalk",
+                "semantic_class": "sidewalk",
+                "geometry": "box"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "weight": 2,
+        "node": {
+          "type": "terminal",
+          "node_id": "background_facade",
+          "semantic_class": "facade",
+          "geometry": "plane"
+        }
+      }
+    ]
+  }
+}

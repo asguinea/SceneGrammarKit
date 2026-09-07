@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "terminal_types",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [3, 2, 1]
+  },
+  "root": {
+    "node_id": "types_split",
+    "type": "split",
+    "axis": "x",
+    "children": [
+      {
+        "weight": 1,
+        "node": {
+          "node_id": "box_terminal",
+          "type": "terminal",
+          "semantic_class": "building",
+          "geometry": "box",
+          "attributes": {
+            "source": "fixture",
+            "level": 1
+          }
+        }
+      },
+      {
+        "weight": 1,
+        "node": {
+          "node_id": "plane_terminal",
+          "type": "terminal",
+          "semantic_class": "ground",
+          "geometry": "plane"
+        }
+      },
+      {
+        "weight": 1,
+        "node": {
+          "node_id": "empty_terminal",
+          "type": "terminal",
+          "semantic_class": "void",
+          "geometry": "empty"
+        }
+      }
+    ]
+  }
+}

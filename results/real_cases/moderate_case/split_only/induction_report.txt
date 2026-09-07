@@ -1,0 +1,145 @@
+SceneGrammarKit constrained split induction
+scene=open_images_reselection_40992cf7a7bbf20e
+split_induction_policy=0.1
+lifting_policy=0.1
+grammar_schema=0.1
+
+Root depth split
+  node=induced_scene_depth_zones
+  axis=z
+  foreground: interval=[0,0.2] weight=0.2
+  midground: interval=[0.2,0.8] weight=0.6
+  background: interval=[0.8,1] weight=0.2
+
+Axis decisions
+  parent=street_layout axis=x source=supplied_region_hint tolerance=0.02
+    candidate=x valid=true overlap=0 spread=0.82 coverage=1 gaps=0
+    candidate=y valid=false overlap=2 spread=0 coverage=1 gaps=0
+    candidate=z valid=false overlap=2 spread=0 coverage=1 gaps=0
+  parent=parking_lane axis=x source=supplied_repeat_hint tolerance=0.0168
+    candidate=x valid=true overlap=0 spread=0.714285714285714 coverage=0.476190476190476 gaps=6
+    candidate=y valid=false overlap=4 spread=0 coverage=1 gaps=2
+    candidate=z valid=false overlap=4 spread=0 coverage=0.25 gaps=2
+
+Boundary decisions
+  parent=street_layout axis=x bounds=[0,1] weights=0.18,0.64,0.18
+    source=left_sidewalk input=[0,0.18] final=[0,0.18]
+    source=road input=[0.18,0.82] final=[0.18,0.82]
+    source=right_curb input=[0.82,1] final=[0.82,1]
+  parent=parking_lane axis=x bounds=[0.08,0.92] weights=0.06,0.08,0.07,0.08,0.07,0.08,0.07,0.0800000000000001,0.07,0.08,0.1
+    source=car_1 input=[0.14,0.22] final=[0.14,0.22]
+    source=car_2 input=[0.29,0.37] final=[0.29,0.37]
+    source=car_3 input=[0.44,0.52] final=[0.44,0.52]
+    source=car_4 input=[0.59,0.67] final=[0.59,0.67]
+    source=car_5 input=[0.74,0.82] final=[0.74,0.82]
+
+Generated gaps and margins
+  parent=street_layout axis=y interval=[0.47,1] reason=trailing_margin node=induced_gap_street_layout_y_1
+  parent=parking_lane axis=x interval=[0,0.08] reason=leading_margin node=induced_gap_parking_lane_x_2
+  parent=parking_lane axis=y interval=[0,0.45] reason=leading_margin node=induced_gap_parking_lane_y_3
+  parent=parking_lane axis=y interval=[0.69,1] reason=trailing_margin node=induced_gap_parking_lane_y_4
+  parent=parking_lane axis=x interval=[0.92,1] reason=trailing_margin node=induced_gap_parking_lane_x_5
+  parent=building_mass axis=x interval=[0,0.04] reason=leading_margin node=induced_gap_building_mass_x_6
+  parent=building_mass axis=y interval=[0,0.66] reason=leading_margin node=induced_gap_building_mass_y_7
+  parent=building_mass axis=y interval=[0.94,1] reason=trailing_margin node=induced_gap_building_mass_y_8
+  parent=building_mass axis=x interval=[0.96,1] reason=trailing_margin node=induced_gap_building_mass_x_9
+
+Source-to-node mapping
+  region:street_layout purpose=structural primary=induced_split_street_layout_x_1
+    nodes=induced_split_street_layout_x_1,induced_zone_foreground
+  region:left_sidewalk purpose=terminal_candidate primary=induced_region_left_sidewalk
+    nodes=induced_region_left_sidewalk
+  region:road purpose=terminal_candidate primary=induced_region_road
+    nodes=induced_region_road
+  region:right_curb purpose=terminal_candidate primary=induced_region_right_curb
+    nodes=induced_region_right_curb
+  region:parking_lane purpose=terminal_candidate primary=induced_region_parking_lane_fragment_1
+    nodes=induced_region_parking_lane_fragment_1,induced_region_parking_lane_fragment_2,induced_region_parking_lane_fragment_3,induced_region_parking_lane_fragment_4,induced_region_parking_lane_fragment_5,induced_region_parking_lane_fragment_6,induced_region_parking_lane_fragment_7,induced_region_parking_lane_fragment_8,induced_region_parking_lane_fragment_9,induced_region_parking_lane_fragment_10,induced_region_parking_lane_fragment_11,induced_region_parking_lane_fragment_12,induced_region_parking_lane_fragment_13,induced_region_parking_lane_fragment_14,induced_region_parking_lane_fragment_15,induced_region_parking_lane_fragment_16,induced_region_parking_lane_fragment_17,induced_region_parking_lane_fragment_18,induced_region_parking_lane_fragment_19,induced_region_parking_lane_fragment_20,induced_region_parking_lane_fragment_21,induced_region_parking_lane_fragment_22,induced_region_parking_lane_fragment_23,induced_region_parking_lane_fragment_24,induced_region_parking_lane_fragment_25,induced_region_parking_lane_fragment_26,induced_split_parking_lane_x_2,induced_wrapper_parking_lane_y_12,induced_zone_midground
+  region:building_mass purpose=terminal_candidate primary=induced_region_building_mass
+    nodes=induced_region_building_mass,induced_wrapper_building_mass_y_14,induced_zone_background
+  instance:car_1 purpose=object_instance primary=induced_instance_car_1
+    nodes=induced_instance_car_1,induced_wrapper_car_1_z_2,induced_wrapper_car_1_y_3
+  instance:car_2 purpose=object_instance primary=induced_instance_car_2
+    nodes=induced_instance_car_2,induced_wrapper_car_2_z_4,induced_wrapper_car_2_y_5
+  instance:car_3 purpose=object_instance primary=induced_instance_car_3
+    nodes=induced_instance_car_3,induced_wrapper_car_3_z_6,induced_wrapper_car_3_y_7
+  instance:car_4 purpose=object_instance primary=induced_instance_car_4
+    nodes=induced_instance_car_4,induced_wrapper_car_4_z_8,induced_wrapper_car_4_y_9
+  instance:car_5 purpose=object_instance primary=induced_instance_car_5
+    nodes=induced_instance_car_5,induced_wrapper_car_5_z_10,induced_wrapper_car_5_y_11
+
+Repeat candidates deferred
+  group=parked_cars axis=x members=car_1,car_2,car_3,car_4,car_5 status=deferred_to_batch_2_5
+
+Grammar statistics
+  source_observations=11
+  represented=11
+  omitted=0
+  splits=18
+  terminals=44
+  empty_terminals=9
+  repeat_nodes=0
+  maximum_depth=6
+  canonical_grammar_bytes=11201
+  validation=true
+  execution_verified=true
+
+Diagnostics
+  INFO supplied_split_axis_used source=street_layout: Used supplied x-axis structural hint.
+  INFO boundary_snapped source=street_layout: Snapped adjacent boundary to midpoint 0.18.
+  INFO boundary_snapped source=street_layout: Snapped adjacent boundary to midpoint 0.82.
+  INFO trailing_margin_created node=induced_gap_street_layout_y_1: Created explicit wrapper trailing_margin interval [0.47, 1.0].
+  INFO wrapper_split_created source=street_layout node=induced_zone_foreground: Created y-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_parking_lane_x_2: Created explicit wrapper leading_margin interval [0.0, 0.08].
+  INFO leading_margin_created node=induced_gap_parking_lane_y_3: Created explicit wrapper leading_margin interval [0.0, 0.44999999999999996].
+  INFO supplied_repeat_axis_used source=parking_lane: Used supplied repeat-group x-axis hint.
+  INFO repeat_candidate_deferred source=parked_cars: Repeat group parked_cars remains independent terminals.
+  INFO wrapper_split_created source=car_1 node=induced_wrapper_car_1_z_2: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_1 node=induced_wrapper_car_1_y_3: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_2 node=induced_wrapper_car_2_z_4: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_2 node=induced_wrapper_car_2_y_5: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_3 node=induced_wrapper_car_3_z_6: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_3 node=induced_wrapper_car_3_y_7: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_4 node=induced_wrapper_car_4_z_8: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_4 node=induced_wrapper_car_4_y_9: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_5 node=induced_wrapper_car_5_z_10: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=car_5 node=induced_wrapper_car_5_y_11: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_parking_lane_y_4: Created explicit wrapper trailing_margin interval [0.69, 1.0].
+  INFO wrapper_split_created source=parking_lane node=induced_wrapper_parking_lane_y_12: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_parking_lane_x_5: Created explicit wrapper trailing_margin interval [0.92, 1.0].
+  INFO wrapper_split_created source=parking_lane node=induced_zone_midground: Created x-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_building_mass_x_6: Created explicit wrapper leading_margin interval [0.0, 0.04].
+  INFO leading_margin_created node=induced_gap_building_mass_y_7: Created explicit wrapper leading_margin interval [0.0, 0.6599999999999999].
+  INFO trailing_margin_created node=induced_gap_building_mass_y_8: Created explicit wrapper trailing_margin interval [0.94, 1.0].
+  INFO wrapper_split_created source=building_mass node=induced_wrapper_building_mass_y_14: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_building_mass_x_9: Created explicit wrapper trailing_margin interval [0.96, 1.0].
+  INFO wrapper_split_created source=building_mass node=induced_zone_background: Created x-axis wrapper split for limited source bounds.
+
+Supplied information
+  - region hierarchy
+  - annotation order and optional order hints
+  - semantic classes and terminal geometry
+  - structural split-axis hints
+  - repeat-group membership and axis hints
+  - lifted proxy bounds
+  - construction tolerances and limits
+
+Derived information
+  - three-zone root split
+  - geometry-selected partition axes
+  - snapped partition boundaries
+  - explicit gap and margin terminals
+  - split weights from final proxy intervals
+  - wrapper splits isolating observation bounds
+  - stable source-to-node mappings
+
+Explicitly not inferred
+  - image segmentation
+  - metric depth
+  - camera calibration
+  - semantic labels beyond supplied annotations
+  - parent hierarchy beyond supplied annotation hierarchy
+  - repeat spacing
+  - RepeatNode structure
+  - stochastic grammar
+  - photorealistic geometry

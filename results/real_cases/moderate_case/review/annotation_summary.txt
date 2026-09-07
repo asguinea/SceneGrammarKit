@@ -1,0 +1,62 @@
+SceneGrammarKit annotation review
+============================
+Scene: open_images_reselection_40992cf7a7bbf20e
+Image: 40992cf7a7bbf20e
+Source dimensions: 1024 x 768 pixels
+Annotations: regions=6, instances=5, repeat_groups=1
+
+Depth-zone breakdown
+--------------------
+- background: 1
+- foreground: 4
+- midground: 6
+
+Semantic-class breakdown
+------------------------
+- building: 1
+- car: 5
+- curb: 1
+- parking: 1
+- road: 2
+- sidewalk: 1
+
+Repeat groups (supplied order)
+------------------------------
+- parked_cars: axis=x; members=car_1,car_2,car_3,car_4,car_5
+
+Region hierarchy
+----------------
+- street_layout
+  - left_sidewalk
+  - road
+  - right_curb
+- parking_lane
+- building_mass
+
+Supplied split-axis hints
+-------------------------
+- street_layout: axis=x
+
+Warnings
+--------
+- none
+
+Supplied information
+--------------------
+- semantic regions
+- object instances
+- foreground/midground/background assignments
+- parent-region relationships
+- split-axis hints
+- repeat-group membership
+- repeat-axis hints
+- repeat-member ordering
+- annotation identifiers
+
+Not inferred in this artifact
+-----------------------------
+- inferred depth
+- inferred split boundaries
+- inferred repeat spacing
+- inferred grammar
+- reconstructed geometry

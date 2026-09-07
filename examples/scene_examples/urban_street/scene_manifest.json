@@ -1,0 +1,41 @@
+{
+  "manifest_version": "0.1",
+  "scene_key": "urban_street",
+  "display_name": "Urban Street",
+  "grammar_path": "grammar.json",
+  "description": "Primary overview showing depth zones, road and sidewalk splits, limited-height parked cars, repeated street objects, and a background facade.",
+  "supported_camera_presets": ["front", "isometric", "top"],
+  "primary_camera": "isometric",
+  "secondary_camera": "top",
+  "primary_render_width": 1200,
+  "primary_render_height": 800,
+  "canonical_edits": [
+    {
+      "edit_key": "road_wider",
+      "operation_type": "set_split_child_weight",
+      "parameters": {
+        "split_node_id": "midground_horizontal_layout",
+        "child_node_id": "road_vertical_layers",
+        "new_weight": 10
+      },
+      "purpose": "Widen the explicit road while narrowing both adjacent sidewalks.",
+      "primary_example_edit": true,
+      "recommended_render_camera": "isometric"
+    },
+    {
+      "edit_key": "more_parked_cars",
+      "operation_type": "set_repeat_count",
+      "parameters": {
+        "repeat_node_id": "parked_cars",
+        "new_count": 7
+      },
+      "purpose": "Increase the visible parked-car count from five to seven.",
+      "primary_example_edit": true,
+      "recommended_render_camera": "isometric"
+    }
+  ],
+  "expected_semantic_classes": ["air", "building", "car", "facade", "foreground", "lamp_post", "road", "sidewalk", "wall"],
+  "expected_split_node_ids": ["background_facade_bands", "car_object_layer", "midground_horizontal_layout", "road_vertical_layers", "scene_depth_zones"],
+  "expected_repeat_node_ids": ["parked_cars", "street_lamps"],
+  "known_limitations": ["Cars, lamp posts, sidewalks, and facade elements are deliberately coarse axis-aligned semantic proxies."]
+}

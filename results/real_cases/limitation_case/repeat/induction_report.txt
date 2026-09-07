@@ -1,0 +1,68 @@
+SceneGrammarKit supplied repeat-group induction
+scene=open_images_limitation_case
+repeat_induction_policy=0.1
+annotation_schema=0.1
+construction_config_schema=0.1
+lifting_policy=0.1
+split_induction_policy=0.1
+grammar_schema=0.1
+execution_policy=0.1
+
+Group decisions
+  none
+
+Member mappings
+  none
+
+Compactness diagnostics
+  split_only_nodes=21
+  repeat_nodes_total=21
+  split_only_splits=8
+  repeat_splits=8
+  split_only_terminals=13
+  repeat_terminals=13
+  split_only_repeats=0
+  repeat_repeats=0
+  split_only_bytes=3690
+  repeat_bytes=3690
+  byte_difference=0
+  byte_ratio=1
+  symbolic_node_difference=0
+  primitives_before=5
+  primitives_after=5
+
+Fidelity diagnostics
+  conceptual_count_before=6
+  conceptual_count_after=6
+  maximum_accepted_member_boundary_error=0
+  maximum_non_repeat_observation_change=0
+  root_bounds_equal=true
+
+Diagnostics
+  INFO no_repeat_groups_supplied: No supplied repeat groups were evaluated.
+
+Supplied information
+  - repeat-group IDs and ordered membership
+  - repeat-axis hints
+  - member semantic classes, geometry, attributes, parents, and depth zones
+  - lifted member proxy bounds
+  - configured repeat tolerances and fallback permissions
+
+Derived information
+  - repeat regularity metrics
+  - median proxy spacing
+  - implied equal-cell element extent
+  - consensus orthogonal proxy bounds
+  - RepeatNode compression decisions
+  - conceptual member mappings and fidelity diagnostics
+  - split-only versus repeat-grammar diagnostic comparison
+
+Explicitly not inferred
+  - repeat groups from image pixels
+  - extra hidden members
+  - occluded instances
+  - physical object size
+  - stochastic repeat rules
+  - learned regularity
+  - metric depth
+  - photorealistic geometry

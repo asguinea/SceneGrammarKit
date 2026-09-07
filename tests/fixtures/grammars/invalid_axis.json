@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "invalid_axis",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "bad_axis",
+    "type": "repeat",
+    "axis": "w",
+    "count": 2,
+    "spacing": 0.1,
+    "element": {
+      "node_id": "item",
+      "type": "terminal",
+      "semantic_class": "post",
+      "geometry": "box"
+    }
+  }
+}

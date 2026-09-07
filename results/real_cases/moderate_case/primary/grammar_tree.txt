@@ -1,0 +1,62 @@
+Scene open_images_reselection_40992cf7a7bbf20e [schema=0.1, units=normalized]
+Bounds min=(0,0,0) max=(1,1,1)
+root: Split id=induced_scene_depth_zones axis=z
+  child[0] weight=0.2
+    node: Split id=induced_zone_foreground axis=y
+      child[0] weight=0.47
+        node: Split id=induced_split_street_layout_x_1 axis=x
+          child[0] weight=0.18
+            node: Terminal id=induced_region_left_sidewalk class=sidewalk geometry=plane
+          child[1] weight=0.64
+            node: Terminal id=induced_region_road class=road geometry=plane
+          child[2] weight=0.18
+            node: Terminal id=induced_region_right_curb class=curb geometry=plane
+      child[1] weight=0.53
+        node: Terminal id=induced_gap_street_layout_y_1 class=empty_space geometry=empty
+  child[1] weight=0.6
+    node: Split id=induced_zone_midground axis=x
+      child[0] weight=0.08
+        node: Terminal id=induced_gap_parking_lane_x_2 class=empty_space geometry=empty
+      child[1] weight=0.84
+        node: Split id=induced_wrapper_parking_lane_y_12 axis=y
+          child[0] weight=0.45
+            node: Terminal id=induced_gap_parking_lane_y_3 class=empty_space geometry=empty
+          child[1] weight=0.24
+            node: Split id=induced_split_parking_lane_x_2 axis=x
+              child[0] weight=0.06
+                node: Terminal id=induced_region_parking_lane_fragment_1 class=parking geometry=plane
+              child[1] weight=0.68
+                node: Split id=induced_repeat_wrapper_parked_cars_y axis=y
+                  child[0] weight=0.0800000000000001
+                    node: Terminal id=induced_repeat_filler_parked_cars_y_0 class=parking geometry=plane
+                  child[1] weight=0.0800000000000001
+                    node: Split id=induced_repeat_wrapper_parked_cars_z axis=z
+                      child[0] weight=0.303
+                        node: Terminal id=induced_repeat_filler_parked_cars_z_0 class=parking geometry=plane
+                      child[1] weight=0.03
+                        node: Repeat id=induced_repeat_parked_cars axis=x count=5 spacing=0.07
+                          element: Terminal id=induced_repeat_element_parked_cars class=car geometry=box
+                      child[2] weight=0.267
+                        node: Terminal id=induced_repeat_filler_parked_cars_z_2 class=parking geometry=plane
+                  child[2] weight=0.0799999999999998
+                    node: Terminal id=induced_repeat_filler_parked_cars_y_2 class=parking geometry=plane
+              child[2] weight=0.1
+                node: Terminal id=induced_region_parking_lane_fragment_26 class=parking geometry=plane
+          child[2] weight=0.31
+            node: Terminal id=induced_gap_parking_lane_y_4 class=empty_space geometry=empty
+      child[2] weight=0.08
+        node: Terminal id=induced_gap_parking_lane_x_5 class=empty_space geometry=empty
+  child[2] weight=0.2
+    node: Split id=induced_zone_background axis=x
+      child[0] weight=0.04
+        node: Terminal id=induced_gap_building_mass_x_6 class=empty_space geometry=empty
+      child[1] weight=0.92
+        node: Split id=induced_wrapper_building_mass_y_14 axis=y
+          child[0] weight=0.66
+            node: Terminal id=induced_gap_building_mass_y_7 class=empty_space geometry=empty
+          child[1] weight=0.28
+            node: Terminal id=induced_region_building_mass class=building geometry=box
+          child[2] weight=0.0600000000000001
+            node: Terminal id=induced_gap_building_mass_y_8 class=empty_space geometry=empty
+      child[2] weight=0.04
+        node: Terminal id=induced_gap_building_mass_x_9 class=empty_space geometry=empty

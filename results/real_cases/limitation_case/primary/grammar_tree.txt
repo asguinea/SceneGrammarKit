@@ -1,0 +1,43 @@
+Scene open_images_limitation_case [schema=0.1, units=normalized]
+Bounds min=(0,0,0) max=(1,1,1)
+root: Split id=induced_scene_depth_zones axis=z
+  child[0] weight=0.2
+    node: Split id=induced_zone_foreground axis=y
+      child[0] weight=0.27
+        node: Terminal id=induced_region_road class=road geometry=plane
+      child[1] weight=0.73
+        node: Terminal id=induced_gap_road_y_1 class=empty_space geometry=empty
+  child[1] weight=0.6
+    node: Split id=induced_zone_midground axis=x
+      child[0] weight=0.1
+        node: Terminal id=induced_gap_facade_layout_x_2 class=empty_space geometry=empty
+      child[1] weight=0.86
+        node: Split id=induced_wrapper_facade_layout_y_4 axis=y
+          child[0] weight=0.27
+            node: Terminal id=induced_gap_facade_layout_y_3 class=empty_space geometry=empty
+          child[1] weight=0.68
+            node: Split id=induced_split_facade_layout_x_1 axis=x
+              child[0] weight=0.22
+                node: Split id=induced_wrapper_left_wing_y_2 axis=y
+                  child[0] weight=0.57
+                    node: Terminal id=induced_region_left_wing class=facade geometry=plane
+                  child[1] weight=0.11
+                    node: Terminal id=induced_gap_left_wing_y_4 class=empty_space geometry=empty
+              child[1] weight=0.46
+                node: Terminal id=induced_region_curved_center class=facade geometry=plane
+              child[2] weight=0.18
+                node: Split id=induced_wrapper_right_wing_y_3 axis=y
+                  child[0] weight=0.45
+                    node: Terminal id=induced_region_right_wing class=facade geometry=plane
+                  child[1] weight=0.23
+                    node: Terminal id=induced_gap_right_wing_y_5 class=empty_space geometry=empty
+          child[2] weight=0.05
+            node: Terminal id=induced_gap_facade_layout_y_6 class=empty_space geometry=empty
+      child[2] weight=0.04
+        node: Terminal id=induced_gap_facade_layout_x_7 class=empty_space geometry=empty
+  child[2] weight=0.2
+    node: Split id=induced_zone_background axis=y
+      child[0] weight=0.7
+        node: Terminal id=induced_gap_sky_y_8 class=empty_space geometry=empty
+      child[1] weight=0.3
+        node: Terminal id=induced_region_sky class=sky geometry=plane

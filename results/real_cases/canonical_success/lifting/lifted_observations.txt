@@ -1,0 +1,101 @@
+SceneGrammarKit coarse lifted observations
+====================================
+Scene: open_images_reselection_736a482693c18962
+Image: 736a482693c18962
+Image verified: true
+Source pixels used for geometric inference: false
+Root bounds: min=(0,0,0) max=(1,1,1)
+
+Depth-zone intervals
+--------------------
+- foreground: [0, 0.2]
+- midground: [0.2, 0.8]
+- background: [0.8, 1]
+
+Lifting assumptions
+-------------------
+- Coordinates form a non-metric normalized orthographic proxy.
+- Supplied depth-zone labels select configured z intervals.
+- Region proxy depth uses the complete configured zone interval.
+- Instance proxy depth uses the image bottom edge and 5% zone thickness.
+- Polygon proxy bounds use the supplied polygon bounding rectangle.
+- Source-image pixels are verified for provenance but not analyzed.
+
+Observation summary
+-------------------
+- regions=6, instances=5, total=11
+
+Observations
+------------
+- region:foreground_ground: purpose=open_space; semantic=foreground; zone=foreground
+  image_bounds=[0,0.88]-[1,1]
+  world_bounds=min=(0,0,0) max=(1,0.12,0.2)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=none; order_hint=none
+- region:facade_layout: purpose=structural; semantic=facade; zone=midground
+  image_bounds=[0.02,0.08]-[0.59,0.83]
+  world_bounds=min=(0.02,0.17,0.2) max=(0.59,0.92,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=y; order_hint=none
+- region:parapet: purpose=terminal_candidate; semantic=facade; zone=midground
+  image_bounds=[0.02,0.08]-[0.59,0.18]
+  world_bounds=min=(0.02,0.82,0.2) max=(0.59,0.92,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=facade_layout; repeat_group=none; split_hint=none; order_hint=2
+- region:window_band: purpose=terminal_candidate; semantic=facade; zone=midground
+  image_bounds=[0.02,0.18]-[0.59,0.7]
+  world_bounds=min=(0.02,0.3,0.2) max=(0.59,0.82,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=facade_layout; repeat_group=none; split_hint=none; order_hint=1
+- region:facade_base: purpose=terminal_candidate; semantic=facade; zone=midground
+  image_bounds=[0.02,0.7]-[0.59,0.83]
+  world_bounds=min=(0.02,0.17,0.2) max=(0.59,0.3,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=facade_layout; repeat_group=none; split_hint=none; order_hint=0
+- region:sky: purpose=terminal_candidate; semantic=sky; zone=background
+  image_bounds=[0,0]-[1,0.22]
+  world_bounds=min=(0,0.78,0.8) max=(1,1,1)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=none; order_hint=none
+- instance:window_1: purpose=object_instance; semantic=window; zone=midground
+  image_bounds=[0.06,0.24]-[0.125,0.34]
+  world_bounds=min=(0.06,0.66,0.581) max=(0.125,0.76,0.611)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=window_band; repeat_group=facade_windows; split_hint=none; order_hint=0
+- instance:window_2: purpose=object_instance; semantic=window; zone=midground
+  image_bounds=[0.16,0.24]-[0.225,0.34]
+  world_bounds=min=(0.16,0.66,0.581) max=(0.225,0.76,0.611)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=window_band; repeat_group=facade_windows; split_hint=none; order_hint=1
+- instance:window_3: purpose=object_instance; semantic=window; zone=midground
+  image_bounds=[0.26,0.24]-[0.325,0.34]
+  world_bounds=min=(0.26,0.66,0.581) max=(0.325,0.76,0.611)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=window_band; repeat_group=facade_windows; split_hint=none; order_hint=2
+- instance:window_4: purpose=object_instance; semantic=window; zone=midground
+  image_bounds=[0.36,0.24]-[0.425,0.34]
+  world_bounds=min=(0.36,0.66,0.581) max=(0.425,0.76,0.611)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=window_band; repeat_group=facade_windows; split_hint=none; order_hint=3
+- instance:window_5: purpose=object_instance; semantic=window; zone=midground
+  image_bounds=[0.46,0.24]-[0.525,0.34]
+  world_bounds=min=(0.46,0.66,0.581) max=(0.525,0.76,0.611)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=window_band; repeat_group=facade_windows; split_hint=none; order_hint=4
+
+Warnings
+--------
+- none
+
+Not inferred
+------------
+- metric depth
+- camera intrinsics
+- camera extrinsics
+- physical object dimensions
+- split hierarchy
+- split boundaries
+- repeat count beyond supplied membership
+- repeat spacing
+- grammar
+- reconstructed mesh
