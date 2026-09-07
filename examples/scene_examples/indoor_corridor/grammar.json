@@ -1,0 +1,148 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "example_indoor_corridor",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "corridor_depth_zones",
+    "type": "split",
+    "axis": "z",
+    "children": [
+      {
+        "weight": 9,
+        "node": {
+          "node_id": "corridor_vertical_layers",
+          "type": "split",
+          "axis": "y",
+          "children": [
+            {
+              "weight": 1,
+              "node": {
+                "node_id": "corridor_floor",
+                "type": "terminal",
+                "semantic_class": "ground",
+                "geometry": "box"
+              }
+            },
+            {
+              "weight": 7,
+              "node": {
+                "node_id": "usable_width_layout",
+                "type": "split",
+                "axis": "x",
+                "children": [
+                  {
+                    "weight": 3,
+                    "node": {
+                      "node_id": "left_wall_layout",
+                      "type": "split",
+                      "axis": "x",
+                      "children": [
+                        {
+                          "weight": 2,
+                          "node": {
+                            "node_id": "left_wall",
+                            "type": "terminal",
+                            "semantic_class": "wall",
+                            "geometry": "box"
+                          }
+                        },
+                        {
+                          "weight": 1,
+                          "node": {
+                            "node_id": "left_doors",
+                            "type": "repeat",
+                            "axis": "z",
+                            "count": 4,
+                            "spacing": 0.05,
+                            "element": {
+                              "node_id": "left_door",
+                              "type": "terminal",
+                              "semantic_class": "door",
+                              "geometry": "box",
+                              "attributes": {
+                                "side": "left"
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "weight": 6,
+                    "node": {
+                      "node_id": "corridor_passage",
+                      "type": "terminal",
+                      "semantic_class": "corridor",
+                      "geometry": "empty"
+                    }
+                  },
+                  {
+                    "weight": 3,
+                    "node": {
+                      "node_id": "right_wall_layout",
+                      "type": "split",
+                      "axis": "x",
+                      "children": [
+                        {
+                          "weight": 1,
+                          "node": {
+                            "node_id": "right_doors",
+                            "type": "repeat",
+                            "axis": "z",
+                            "count": 4,
+                            "spacing": 0.05,
+                            "element": {
+                              "node_id": "right_door",
+                              "type": "terminal",
+                              "semantic_class": "door",
+                              "geometry": "box",
+                              "attributes": {
+                                "side": "right"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "weight": 2,
+                          "node": {
+                            "node_id": "right_wall",
+                            "type": "terminal",
+                            "semantic_class": "wall",
+                            "geometry": "box"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "weight": 2,
+              "node": {
+                "node_id": "corridor_ceiling",
+                "type": "terminal",
+                "semantic_class": "ceiling",
+                "geometry": "box"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "weight": 1,
+        "node": {
+          "node_id": "corridor_end_wall",
+          "type": "terminal",
+          "semantic_class": "wall",
+          "geometry": "box"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,112 @@
+SceneGrammarKit constrained split induction
+scene=open_images_limitation_case
+split_induction_policy=0.1
+lifting_policy=0.1
+grammar_schema=0.1
+
+Root depth split
+  node=induced_scene_depth_zones
+  axis=z
+  foreground: interval=[0,0.2] weight=0.2
+  midground: interval=[0.2,0.8] weight=0.6
+  background: interval=[0.8,1] weight=0.2
+
+Axis decisions
+  parent=facade_layout axis=x source=supplied_region_hint tolerance=0.0172
+    candidate=x valid=true overlap=0 spread=0.767441860465116 coverage=1 gaps=0
+    candidate=y valid=false overlap=2 spread=0.169117647058824 coverage=1 gaps=0
+    candidate=z valid=false overlap=2 spread=0 coverage=1 gaps=0
+
+Boundary decisions
+  parent=facade_layout axis=x bounds=[0.1,0.96] weights=0.22,0.46,0.18
+    source=left_wing input=[0.1,0.32] final=[0.1,0.32]
+    source=curved_center input=[0.32,0.78] final=[0.32,0.78]
+    source=right_wing input=[0.78,0.96] final=[0.78,0.96]
+
+Generated gaps and margins
+  parent=road axis=y interval=[0.27,1] reason=trailing_margin node=induced_gap_road_y_1
+  parent=facade_layout axis=x interval=[0,0.1] reason=leading_margin node=induced_gap_facade_layout_x_2
+  parent=facade_layout axis=y interval=[0,0.27] reason=leading_margin node=induced_gap_facade_layout_y_3
+  parent=left_wing axis=y interval=[0.84,0.95] reason=trailing_margin node=induced_gap_left_wing_y_4
+  parent=right_wing axis=y interval=[0.72,0.95] reason=trailing_margin node=induced_gap_right_wing_y_5
+  parent=facade_layout axis=y interval=[0.95,1] reason=trailing_margin node=induced_gap_facade_layout_y_6
+  parent=facade_layout axis=x interval=[0.96,1] reason=trailing_margin node=induced_gap_facade_layout_x_7
+  parent=sky axis=y interval=[0,0.7] reason=leading_margin node=induced_gap_sky_y_8
+
+Source-to-node mapping
+  region:road purpose=terminal_candidate primary=induced_region_road
+    nodes=induced_region_road,induced_zone_foreground
+  region:facade_layout purpose=structural primary=induced_split_facade_layout_x_1
+    nodes=induced_split_facade_layout_x_1,induced_wrapper_facade_layout_y_4,induced_zone_midground
+  region:left_wing purpose=terminal_candidate primary=induced_region_left_wing
+    nodes=induced_region_left_wing,induced_wrapper_left_wing_y_2
+  region:curved_center purpose=terminal_candidate primary=induced_region_curved_center
+    nodes=induced_region_curved_center
+  region:right_wing purpose=terminal_candidate primary=induced_region_right_wing
+    nodes=induced_region_right_wing,induced_wrapper_right_wing_y_3
+  region:sky purpose=terminal_candidate primary=induced_region_sky
+    nodes=induced_region_sky,induced_zone_background
+
+Repeat candidates deferred
+  none
+
+Grammar statistics
+  source_observations=6
+  represented=6
+  omitted=0
+  splits=8
+  terminals=13
+  empty_terminals=8
+  repeat_nodes=0
+  maximum_depth=5
+  canonical_grammar_bytes=3690
+  validation=true
+  execution_verified=true
+
+Diagnostics
+  INFO trailing_margin_created node=induced_gap_road_y_1: Created explicit wrapper trailing_margin interval [0.27, 1.0].
+  INFO wrapper_split_created source=road node=induced_zone_foreground: Created y-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_facade_layout_x_2: Created explicit wrapper leading_margin interval [0.0, 0.1].
+  INFO leading_margin_created node=induced_gap_facade_layout_y_3: Created explicit wrapper leading_margin interval [0.0, 0.27].
+  INFO supplied_split_axis_used source=facade_layout: Used supplied x-axis structural hint.
+  INFO boundary_snapped source=facade_layout: Snapped adjacent boundary to midpoint 0.32.
+  INFO boundary_snapped source=facade_layout: Snapped adjacent boundary to midpoint 0.78.
+  INFO trailing_margin_created node=induced_gap_left_wing_y_4: Created explicit wrapper trailing_margin interval [0.84, 0.95].
+  INFO wrapper_split_created source=left_wing node=induced_wrapper_left_wing_y_2: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_right_wing_y_5: Created explicit wrapper trailing_margin interval [0.72, 0.95].
+  INFO wrapper_split_created source=right_wing node=induced_wrapper_right_wing_y_3: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_facade_layout_y_6: Created explicit wrapper trailing_margin interval [0.95, 1.0].
+  INFO wrapper_split_created source=facade_layout node=induced_wrapper_facade_layout_y_4: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_facade_layout_x_7: Created explicit wrapper trailing_margin interval [0.96, 1.0].
+  INFO wrapper_split_created source=facade_layout node=induced_zone_midground: Created x-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_sky_y_8: Created explicit wrapper leading_margin interval [0.0, 0.7].
+  INFO wrapper_split_created source=sky node=induced_zone_background: Created y-axis wrapper split for limited source bounds.
+
+Supplied information
+  - region hierarchy
+  - annotation order and optional order hints
+  - semantic classes and terminal geometry
+  - structural split-axis hints
+  - repeat-group membership and axis hints
+  - lifted proxy bounds
+  - construction tolerances and limits
+
+Derived information
+  - three-zone root split
+  - geometry-selected partition axes
+  - snapped partition boundaries
+  - explicit gap and margin terminals
+  - split weights from final proxy intervals
+  - wrapper splits isolating observation bounds
+  - stable source-to-node mappings
+
+Explicitly not inferred
+  - image segmentation
+  - metric depth
+  - camera calibration
+  - semantic labels beyond supplied annotations
+  - parent hierarchy beyond supplied annotation hierarchy
+  - repeat spacing
+  - RepeatNode structure
+  - stochastic grammar
+  - photorealistic geometry

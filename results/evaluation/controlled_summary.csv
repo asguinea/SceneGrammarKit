@@ -1,0 +1,17 @@
+metric,numerator,denominator,value,minimum,maximum
+accepted_repeat_groups,,12,8,,
+complete_observation_coverage_rate,12,12,1.0,,
+execution_success_rate,12,12,1.0,,
+exact_repeat_count_rate,8,12,0.6666666666666666,,
+fallback_repeat_groups,,12,4,,
+evaluation_snapshot_id,,,scene-grammar-kit-evaluation-v0.1,,
+input_hashes,,,,,
+median_byte_ratio,,12,0.5779244378805716,,
+median_repeat_bytes,,12,4841.5,,
+median_split_only_bytes,,12,9945.5,,
+metric_implementation_sha256,,,a0374cbd80400155b6d5b806aed689681052ff9e56cb547dc435b28363ae343e,,
+metric_implementation_version,,,0.1,,
+evaluation_policy_version,,,0.1,,
+split_boundary_error,,24,0.0,0.0,1.3877787807814457e-16
+valid_edit_rate,12,12,1.0,,
+valid_grammar_rate,12,12,1.0,,

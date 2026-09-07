@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "repeat_cannot_fit",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "bad_fit",
+    "type": "repeat",
+    "axis": "x",
+    "count": 3,
+    "spacing": 0.5,
+    "element": {
+      "node_id": "box",
+      "type": "terminal",
+      "semantic_class": "post",
+      "geometry": "box"
+    }
+  }
+}

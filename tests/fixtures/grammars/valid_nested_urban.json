@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "nested_urban_example",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "depth_zones",
+    "type": "split",
+    "axis": "z",
+    "children": [
+      {
+        "weight": 1,
+        "node": {
+          "node_id": "foreground",
+          "type": "terminal",
+          "semantic_class": "foreground",
+          "geometry": "empty"
+        }
+      },
+      {
+        "weight": 3,
+        "node": {
+          "node_id": "midground_bands",
+          "type": "split",
+          "axis": "x",
+          "children": [
+            {
+              "weight": 1,
+              "node": {
+                "node_id": "sidewalk_left",
+                "type": "terminal",
+                "semantic_class": "sidewalk",
+                "geometry": "box"
+              }
+            },
+            {
+              "weight": 2,
+              "node": {
+                "node_id": "parked_cars",
+                "type": "repeat",
+                "axis": "z",
+                "count": 4,
+                "spacing": 0.08,
+                "element": {
+                  "node_id": "car",
+                  "type": "terminal",
+                  "semantic_class": "car",
+                  "geometry": "box",
+                  "attributes": {
+                    "source": "annotated",
+                    "confidence": 1
+                  }
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "node": {
+                "node_id": "sidewalk_right",
+                "type": "terminal",
+                "semantic_class": "sidewalk",
+                "geometry": "box"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "weight": 1,
+        "node": {
+          "node_id": "background",
+          "type": "terminal",
+          "semantic_class": "facade",
+          "geometry": "plane"
+        }
+      }
+    ]
+  }
+}

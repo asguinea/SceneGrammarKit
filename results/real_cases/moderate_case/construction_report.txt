@@ -1,0 +1,148 @@
+SceneGrammarKit annotation-assisted scene construction
+scene=open_images_reselection_40992cf7a7bbf20e
+image=40992cf7a7bbf20e
+constructor_policy=0.1
+status=PASS
+
+Stage summary
+  annotation_validation: PASS - Annotation schema is valid.
+  config_validation: PASS - Construction configuration is valid.
+  compatibility_validation: PASS - Annotation and configuration are compatible.
+  image_verification: PASS - Source image was decoded, hashed, and verified.
+  annotation_review: PASS - Annotation overlay and supplied-evidence summaries were produced.
+  lifting: PASS - Created 11 proxy observations.
+  split_induction: PASS - Batch 2.4 split-only grammar was constructed.
+  repeat_induction: PASS - Batch 2.5 evaluated only supplied repeat groups.
+  grammar_validation: PASS - Split-only and repeat grammars both validate.
+  execution: PASS - Split-only and repeat grammars executed successfully.
+  export: PASS - Split-only, repeat, and primary GLB artifacts were exported.
+  rendering: PASS - All grammar previews use identical deterministic settings.
+  default_edit: PASS - Increased the first accepted supplied repeat count as a user-requested procedural variation; the added instance is not claimed as observed or inferred.
+  persistence: PASS - Canonical success report is written after all other artifacts.
+
+Grammar summaries
+  split_only: nodes=62 splits=18 repeats=0 terminals=44 primitives=35 bytes=11201
+  repeat: nodes=31 splits=10 repeats=1 terminals=20 primitives=15 bytes=5469
+
+Primary grammar
+  type=repeat
+  reason=Repeat grammar selected because at least one supplied group was accepted.
+  sha256=7892056c29b0a7f51a016e73fb37a69e73ef8f6146b24bd0d804299d33c27fa5
+
+Repeat decisions
+  supplied=1
+  accepted=1
+  fallback=0
+
+Default edit
+  applied=true
+  operation=set_repeat_count
+  target=induced_repeat_parked_cars
+  requested=6
+  realized=6
+  reason=Increased the first accepted supplied repeat count as a user-requested procedural variation; the added instance is not claimed as observed or inferred.
+
+Artifacts (55)
+  README.md
+  artifact_index.json
+  construction_report.json
+  construction_report.txt
+  edit/after.png
+  edit/after.render.json
+  edit/before.png
+  edit/before.render.json
+  edit/edit_report.json
+  edit/edit_specification.json
+  edit/execution_report_after.json
+  edit/grammar_after.json
+  edit/grammar_before.json
+  edit/primitives_after.json
+  edit/scene_after.glb
+  edit/semantic_index_after.json
+  input/annotation.json
+  input/construction_config.json
+  input/source_image.jpg
+  lifting/lifted_observations.json
+  lifting/lifted_observations.txt
+  lifting/lifting_report.json
+  primary/execution_report.json
+  primary/grammar.json
+  primary/grammar_tree.txt
+  primary/primitives.json
+  primary/render.json
+  primary/render.png
+  primary/scene.glb
+  primary/semantic_index.json
+  repeat/execution_report.json
+  repeat/grammar.json
+  repeat/grammar_tree.txt
+  repeat/induction_report.json
+  repeat/induction_report.txt
+  repeat/primitives.json
+  repeat/render.json
+  repeat/render.png
+  repeat/scene.glb
+  repeat/semantic_index.json
+  review/annotation_overlay.png
+  review/annotation_review_report.json
+  review/annotation_summary.json
+  review/annotation_summary.txt
+  runtime_report.json
+  split_only/execution_report.json
+  split_only/grammar.json
+  split_only/grammar_tree.txt
+  split_only/induction_report.json
+  split_only/induction_report.txt
+  split_only/primitives.json
+  split_only/render.json
+  split_only/render.png
+  split_only/scene.glb
+  split_only/semantic_index.json
+
+Supplied by annotation
+  - semantic regions
+  - object instances
+  - depth-zone assignments
+  - region hierarchy
+  - split-axis hints
+  - repeat membership
+  - repeat-axis hints
+  - semantic classes
+  - terminal geometry types
+
+Supplied by configuration
+  - root bounds
+  - depth-zone intervals
+  - alignment, size, spacing, and boundary tolerances
+  - axis policy
+  - repeat fallback policy
+  - grammar-depth limits
+
+Derived by SceneGrammarKit
+  - proxy 3D bounds
+  - selected split axes when not supplied
+  - split boundaries
+  - explicit gap regions
+  - wrapper splits
+  - repeat acceptance
+  - repeat spacing
+  - representative repeat element
+  - primary grammar selection
+  - execution proxy geometry
+  - semantic preview renders
+
+Explicitly not inferred
+  - semantic segmentation from pixels
+  - monocular metric depth
+  - camera calibration
+  - hidden objects
+  - additional repeat members
+  - physical dimensions
+  - photorealistic reconstruction
+  - texture or appearance models
+
+Warnings
+  - none
+
+Reproduction
+  python -m scene_grammar_kit construct-assisted-scene input/annotation.json --config input/construction_config.json --out reproduced_bundle --width 1200 --height 800 --camera isometric

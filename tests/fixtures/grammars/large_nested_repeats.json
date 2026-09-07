@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "large_nested_repeats",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "large_outer",
+    "type": "repeat",
+    "axis": "x",
+    "count": 1000000,
+    "spacing": 0,
+    "element": {
+      "node_id": "large_inner",
+      "type": "repeat",
+      "axis": "y",
+      "count": 1000000,
+      "spacing": 0,
+      "element": {
+        "node_id": "instance",
+        "type": "terminal",
+        "semantic_class": "window",
+        "geometry": "plane"
+      }
+    }
+  }
+}

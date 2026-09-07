@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "count_one_repeat",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [2, 3, 4],
+    "max": [6, 9, 12]
+  },
+  "root": {
+    "node_id": "single_repeat",
+    "type": "repeat",
+    "axis": "z",
+    "count": 1,
+    "spacing": 0.25,
+    "element": {
+      "node_id": "single_box",
+      "type": "terminal",
+      "semantic_class": "building",
+      "geometry": "box"
+    }
+  }
+}

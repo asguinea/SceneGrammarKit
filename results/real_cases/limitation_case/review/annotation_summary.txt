@@ -1,0 +1,59 @@
+SceneGrammarKit annotation review
+============================
+Scene: open_images_limitation_case
+Image: 692c5c6be088dbf8
+Source dimensions: 1024 x 305 pixels
+Annotations: regions=6, instances=0, repeat_groups=0
+
+Depth-zone breakdown
+--------------------
+- background: 1
+- foreground: 1
+- midground: 4
+
+Semantic-class breakdown
+------------------------
+- facade: 4
+- road: 1
+- sky: 1
+
+Repeat groups (supplied order)
+------------------------------
+- none
+
+Region hierarchy
+----------------
+- road
+- facade_layout
+  - left_wing
+  - curved_center
+  - right_wing
+- sky
+
+Supplied split-axis hints
+-------------------------
+- facade_layout: axis=x
+
+Warnings
+--------
+- none
+
+Supplied information
+--------------------
+- semantic regions
+- object instances
+- foreground/midground/background assignments
+- parent-region relationships
+- split-axis hints
+- repeat-group membership
+- repeat-axis hints
+- repeat-member ordering
+- annotation identifiers
+
+Not inferred in this artifact
+-----------------------------
+- inferred depth
+- inferred split boundaries
+- inferred repeat spacing
+- inferred grammar
+- reconstructed geometry

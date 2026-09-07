@@ -1,0 +1,101 @@
+SceneGrammarKit coarse lifted observations
+====================================
+Scene: open_images_reselection_40992cf7a7bbf20e
+Image: 40992cf7a7bbf20e
+Image verified: true
+Source pixels used for geometric inference: false
+Root bounds: min=(0,0,0) max=(1,1,1)
+
+Depth-zone intervals
+--------------------
+- foreground: [0, 0.2]
+- midground: [0.2, 0.8]
+- background: [0.8, 1]
+
+Lifting assumptions
+-------------------
+- Coordinates form a non-metric normalized orthographic proxy.
+- Supplied depth-zone labels select configured z intervals.
+- Region proxy depth uses the complete configured zone interval.
+- Instance proxy depth uses the image bottom edge and 5% zone thickness.
+- Polygon proxy bounds use the supplied polygon bounding rectangle.
+- Source-image pixels are verified for provenance but not analyzed.
+
+Observation summary
+-------------------
+- regions=6, instances=5, total=11
+
+Observations
+------------
+- region:street_layout: purpose=structural; semantic=road; zone=foreground
+  image_bounds=[0,0.53]-[1,1]
+  world_bounds=min=(0,0,0) max=(1,0.47,0.2)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=x; order_hint=none
+- region:left_sidewalk: purpose=terminal_candidate; semantic=sidewalk; zone=foreground
+  image_bounds=[0,0.53]-[0.18,1]
+  world_bounds=min=(0,0,0) max=(0.18,0.47,0.2)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=street_layout; repeat_group=none; split_hint=none; order_hint=0
+- region:road: purpose=terminal_candidate; semantic=road; zone=foreground
+  image_bounds=[0.18,0.53]-[0.82,1]
+  world_bounds=min=(0.18,0,0) max=(0.82,0.47,0.2)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=street_layout; repeat_group=none; split_hint=none; order_hint=1
+- region:right_curb: purpose=terminal_candidate; semantic=curb; zone=foreground
+  image_bounds=[0.82,0.53]-[1,1]
+  world_bounds=min=(0.82,0,0) max=(1,0.47,0.2)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=street_layout; repeat_group=none; split_hint=none; order_hint=2
+- region:parking_lane: purpose=terminal_candidate; semantic=parking; zone=midground
+  image_bounds=[0.08,0.31]-[0.92,0.55]
+  world_bounds=min=(0.08,0.45,0.2) max=(0.92,0.69,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=none; order_hint=none
+- region:building_mass: purpose=terminal_candidate; semantic=building; zone=background
+  image_bounds=[0.04,0.06]-[0.96,0.34]
+  world_bounds=min=(0.04,0.66,0.8) max=(0.96,0.94,1)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=none; order_hint=none
+- instance:car_1: purpose=object_instance; semantic=car; zone=midground
+  image_bounds=[0.14,0.39]-[0.22,0.47]
+  world_bounds=min=(0.14,0.53,0.503) max=(0.22,0.61,0.533)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=parking_lane; repeat_group=parked_cars; split_hint=none; order_hint=0
+- instance:car_2: purpose=object_instance; semantic=car; zone=midground
+  image_bounds=[0.29,0.39]-[0.37,0.47]
+  world_bounds=min=(0.29,0.53,0.503) max=(0.37,0.61,0.533)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=parking_lane; repeat_group=parked_cars; split_hint=none; order_hint=1
+- instance:car_3: purpose=object_instance; semantic=car; zone=midground
+  image_bounds=[0.44,0.39]-[0.52,0.47]
+  world_bounds=min=(0.44,0.53,0.503) max=(0.52,0.61,0.533)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=parking_lane; repeat_group=parked_cars; split_hint=none; order_hint=2
+- instance:car_4: purpose=object_instance; semantic=car; zone=midground
+  image_bounds=[0.59,0.39]-[0.67,0.47]
+  world_bounds=min=(0.59,0.53,0.503) max=(0.67,0.61,0.533)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=parking_lane; repeat_group=parked_cars; split_hint=none; order_hint=3
+- instance:car_5: purpose=object_instance; semantic=car; zone=midground
+  image_bounds=[0.74,0.39]-[0.82,0.47]
+  world_bounds=min=(0.74,0.53,0.503) max=(0.82,0.61,0.533)
+  depth_policy=image_bottom_proxy_anchor; approximation=rectangle_bounds
+  supplied=parent=parking_lane; repeat_group=parked_cars; split_hint=none; order_hint=4
+
+Warnings
+--------
+- none
+
+Not inferred
+------------
+- metric depth
+- camera intrinsics
+- camera extrinsics
+- physical object dimensions
+- split hierarchy
+- split boundaries
+- repeat count beyond supplied membership
+- repeat spacing
+- grammar
+- reconstructed mesh

@@ -1,0 +1,206 @@
+{
+  "shortlist_policy_version": "0.1",
+  "records": [
+    {
+      "image_id": "736a482693c18962",
+      "family": "facade",
+      "camera": "front",
+      "selected_role": "canonical_success",
+      "layout": {
+        "facade_bounds": [0.02, 0.59, 0.08, 0.83],
+        "window_band": [0.02, 0.59, 0.18, 0.7],
+        "repeat_start": 0.06,
+        "repeat_width": 0.065,
+        "repeat_gap": 0.035,
+        "repeat_v": [0.24, 0.34],
+        "repeat_count": 5
+      },
+      "failed_gates": [],
+      "visual_note": "The flat-roofed office facade, horizontal bands, and five large first-row windows remain immediately legible in the front-view split-and-repeat proxy."
+    },
+    {
+      "image_id": "94003f097439d999",
+      "family": "facade",
+      "camera": "front",
+      "selected_role": null,
+      "layout": {
+        "facade_bounds": [0.02, 0.59, 0.08, 0.83],
+        "window_band": [0.02, 0.59, 0.18, 0.7],
+        "repeat_start": 0.06,
+        "repeat_width": 0.065,
+        "repeat_gap": 0.035,
+        "repeat_v": [0.24, 0.34],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "no_identity_defining_unsupported_feature",
+        "three_second_correspondence"
+      ],
+      "visual_note": "The regular windows are usable, but the receding blocks and visible pitched roofline define too much of the source identity for a front planar proxy."
+    },
+    {
+      "image_id": "89e78cb41035488a",
+      "family": "facade",
+      "camera": "front",
+      "selected_role": null,
+      "layout": {
+        "facade_bounds": [0.02, 0.59, 0.08, 0.83],
+        "window_band": [0.02, 0.59, 0.18, 0.7],
+        "repeat_start": 0.06,
+        "repeat_width": 0.065,
+        "repeat_gap": 0.035,
+        "repeat_v": [0.24, 0.34],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "three_second_correspondence",
+        "no_identity_defining_unsupported_feature"
+      ],
+      "visual_note": "The apartment facade has visible repetition, but projecting corner volumes, balconies, and roof gables make the single front plane read as oversimplified."
+    },
+    {
+      "image_id": "84abec34f372cbd5",
+      "family": "facade",
+      "camera": "front",
+      "selected_role": null,
+      "layout": {
+        "facade_bounds": [0.02, 0.79, 0.08, 0.83],
+        "window_band": [0.02, 0.79, 0.18, 0.7],
+        "repeat_start": 0.06,
+        "repeat_width": 0.065,
+        "repeat_gap": 0.035,
+        "repeat_v": [0.24, 0.34],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "no_identity_defining_unsupported_feature",
+        "deliberately_abstract_correspondence"
+      ],
+      "visual_note": "The long window rhythm is clear, but the colonnade, corner projection, and ornamental facade treatment dominate the photograph."
+    },
+    {
+      "image_id": "4eb2d5eda933a95c",
+      "family": "facade",
+      "camera": "front",
+      "selected_role": null,
+      "layout": {
+        "facade_bounds": [0.02, 0.59, 0.08, 0.83],
+        "window_band": [0.02, 0.59, 0.18, 0.7],
+        "repeat_start": 0.06,
+        "repeat_width": 0.065,
+        "repeat_gap": 0.035,
+        "repeat_v": [0.24, 0.34],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "three_second_correspondence",
+        "no_identity_defining_unsupported_feature",
+        "scene_matched_camera"
+      ],
+      "visual_note": "The building is strongly foreshortened and its projecting structural frame cannot be communicated faithfully by the required front planar proxy."
+    },
+    {
+      "image_id": "40992cf7a7bbf20e",
+      "family": "street",
+      "camera": "isometric",
+      "selected_role": "moderate_case",
+      "layout": {
+        "road_bounds": [0.0, 1.0, 0.53, 1.0],
+        "parking_bounds": [0.08, 0.92, 0.31, 0.55],
+        "building_bounds": [0.04, 0.96, 0.06, 0.34],
+        "repeat_start": 0.14,
+        "repeat_width": 0.08,
+        "repeat_gap": 0.07,
+        "repeat_v": [0.39, 0.47],
+        "repeat_count": 5
+      },
+      "failed_gates": [],
+      "visual_note": "The elevated view exposes straight roadway, curb/side bands, parking lane, planar building masses, and a clearly editable row of parked cars."
+    },
+    {
+      "image_id": "53082ecce31b23bc",
+      "family": "street",
+      "camera": "isometric",
+      "selected_role": null,
+      "layout": {
+        "road_bounds": [0.0, 1.0, 0.53, 1.0],
+        "parking_bounds": [0.08, 0.92, 0.31, 0.55],
+        "building_bounds": [0.04, 0.96, 0.06, 0.34],
+        "repeat_start": 0.14,
+        "repeat_width": 0.08,
+        "repeat_gap": 0.07,
+        "repeat_v": [0.39, 0.47],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "three_second_correspondence",
+        "no_dominant_proxy_slab"
+      ],
+      "visual_note": "The boulevard is straight, but the low-resolution motion blur and broad undifferentiated roadway make the quick proxy less immediate than the selected parking avenue."
+    },
+    {
+      "image_id": "1ab5db67d31e2038",
+      "family": "street",
+      "camera": "isometric",
+      "selected_role": null,
+      "layout": {
+        "road_bounds": [0.0, 1.0, 0.53, 1.0],
+        "parking_bounds": [0.08, 0.92, 0.31, 0.55],
+        "building_bounds": [0.04, 0.96, 0.06, 0.34],
+        "repeat_start": 0.14,
+        "repeat_width": 0.08,
+        "repeat_gap": 0.07,
+        "repeat_v": [0.39, 0.47],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "supported_terminal_organization",
+        "no_identity_defining_unsupported_feature",
+        "no_dominant_proxy_slab"
+      ],
+      "visual_note": "The elevated intersection contains curved landscaping, crossing traffic flows, and dense foliage that cannot be reduced to the existing straight-band terminals without losing its identity."
+    },
+    {
+      "image_id": "8c2b6a7e0e6ea902",
+      "family": "street",
+      "camera": "isometric",
+      "selected_role": null,
+      "layout": {
+        "road_bounds": [0.0, 1.0, 0.53, 1.0],
+        "parking_bounds": [0.08, 0.92, 0.31, 0.55],
+        "building_bounds": [0.04, 0.96, 0.06, 0.34],
+        "repeat_start": 0.14,
+        "repeat_width": 0.08,
+        "repeat_gap": 0.07,
+        "repeat_v": [0.39, 0.47],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "visible_repeats_when_used",
+        "unmistakable_edit_at_quarter_scale"
+      ],
+      "visual_note": "The road bands are clean, but the repeated parked cars are too small and distant for the count edit to remain unmistakable at quarter scale."
+    },
+    {
+      "image_id": "97293a439963c5f2",
+      "family": "street",
+      "camera": "isometric",
+      "selected_role": null,
+      "layout": {
+        "road_bounds": [0.0, 1.0, 0.53, 1.0],
+        "parking_bounds": [0.08, 0.92, 0.31, 0.55],
+        "building_bounds": [0.04, 0.96, 0.06, 0.34],
+        "repeat_start": 0.14,
+        "repeat_width": 0.08,
+        "repeat_gap": 0.07,
+        "repeat_v": [0.39, 0.47],
+        "repeat_count": 5
+      },
+      "failed_gates": [
+        "visible_repeats_when_used",
+        "story_survives_label_removal"
+      ],
+      "visual_note": "The straight road and curb are usable, but the potentially repeated lights and vehicles are small enough that the structural story depends on labels."
+    }
+  ]
+}

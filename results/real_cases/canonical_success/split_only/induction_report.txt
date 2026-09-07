@@ -1,0 +1,147 @@
+SceneGrammarKit constrained split induction
+scene=open_images_reselection_736a482693c18962
+split_induction_policy=0.1
+lifting_policy=0.1
+grammar_schema=0.1
+
+Root depth split
+  node=induced_scene_depth_zones
+  axis=z
+  foreground: interval=[0,0.2] weight=0.2
+  midground: interval=[0.2,0.8] weight=0.6
+  background: interval=[0.8,1] weight=0.2
+
+Axis decisions
+  parent=facade_layout axis=y source=supplied_region_hint tolerance=0.015
+    candidate=x valid=false overlap=2 spread=0 coverage=1 gaps=1
+    candidate=y valid=true overlap=0 spread=0.846666666666667 coverage=1 gaps=0
+    candidate=z valid=false overlap=2 spread=0 coverage=1 gaps=0
+  parent=window_band axis=x source=supplied_repeat_hint tolerance=0.0114
+    candidate=x valid=true overlap=0 spread=0.701754385964912 coverage=0.570175438596491 gaps=6
+    candidate=y valid=false overlap=4 spread=0 coverage=0.961538461538462 gaps=2
+    candidate=z valid=false overlap=4 spread=0 coverage=0.25 gaps=2
+
+Boundary decisions
+  parent=window_band axis=x bounds=[0.02,0.59] weights=0.04,0.065,0.035,0.065,0.035,0.065,0.035,0.065,0.035,0.065,0.0649999999999999
+    source=window_1 input=[0.06,0.125] final=[0.06,0.125]
+    source=window_2 input=[0.16,0.225] final=[0.16,0.225]
+    source=window_3 input=[0.26,0.325] final=[0.26,0.325]
+    source=window_4 input=[0.36,0.425] final=[0.36,0.425]
+    source=window_5 input=[0.46,0.525] final=[0.46,0.525]
+  parent=facade_layout axis=y bounds=[0.17,0.92] weights=0.13,0.52,0.1
+    source=facade_base input=[0.17,0.3] final=[0.17,0.3]
+    source=window_band input=[0.3,0.82] final=[0.3,0.82]
+    source=parapet input=[0.82,0.92] final=[0.82,0.92]
+
+Generated gaps and margins
+  parent=foreground_ground axis=y interval=[0.12,1] reason=trailing_margin node=induced_gap_foreground_ground_y_1
+  parent=facade_layout axis=y interval=[0,0.17] reason=leading_margin node=induced_gap_facade_layout_y_2
+  parent=facade_base axis=x interval=[0,0.02] reason=leading_margin node=induced_gap_facade_base_x_3
+  parent=window_band axis=x interval=[0,0.02] reason=leading_margin node=induced_gap_window_band_x_4
+  parent=parapet axis=x interval=[0,0.02] reason=leading_margin node=induced_gap_parapet_x_5
+  parent=facade_layout axis=y interval=[0.92,1] reason=trailing_margin node=induced_gap_facade_layout_y_6
+  parent=facade_layout axis=x interval=[0.59,1] reason=trailing_margin node=induced_gap_facade_layout_x_7
+  parent=sky axis=y interval=[0,0.78] reason=leading_margin node=induced_gap_sky_y_8
+
+Source-to-node mapping
+  region:foreground_ground purpose=open_space primary=induced_region_foreground_ground
+    nodes=induced_region_foreground_ground,induced_zone_foreground
+  region:facade_layout purpose=structural primary=induced_split_facade_layout_y_2
+    nodes=induced_split_facade_layout_y_2,induced_wrapper_facade_layout_y_15,induced_zone_midground
+  region:parapet purpose=terminal_candidate primary=induced_region_parapet
+    nodes=induced_region_parapet,induced_wrapper_parapet_x_14
+  region:window_band purpose=terminal_candidate primary=induced_region_window_band_fragment_1
+    nodes=induced_region_window_band_fragment_1,induced_region_window_band_fragment_2,induced_region_window_band_fragment_3,induced_region_window_band_fragment_4,induced_region_window_band_fragment_5,induced_region_window_band_fragment_6,induced_region_window_band_fragment_7,induced_region_window_band_fragment_8,induced_region_window_band_fragment_9,induced_region_window_band_fragment_10,induced_region_window_band_fragment_11,induced_region_window_band_fragment_12,induced_region_window_band_fragment_13,induced_region_window_band_fragment_14,induced_region_window_band_fragment_15,induced_region_window_band_fragment_16,induced_region_window_band_fragment_17,induced_region_window_band_fragment_18,induced_region_window_band_fragment_19,induced_region_window_band_fragment_20,induced_region_window_band_fragment_21,induced_region_window_band_fragment_22,induced_region_window_band_fragment_23,induced_region_window_band_fragment_24,induced_region_window_band_fragment_25,induced_region_window_band_fragment_26,induced_split_window_band_x_1,induced_wrapper_window_band_x_13
+  region:facade_base purpose=terminal_candidate primary=induced_region_facade_base
+    nodes=induced_region_facade_base,induced_wrapper_facade_base_x_2
+  region:sky purpose=terminal_candidate primary=induced_region_sky
+    nodes=induced_region_sky,induced_zone_background
+  instance:window_1 purpose=object_instance primary=induced_instance_window_1
+    nodes=induced_instance_window_1,induced_wrapper_window_1_z_3,induced_wrapper_window_1_y_4
+  instance:window_2 purpose=object_instance primary=induced_instance_window_2
+    nodes=induced_instance_window_2,induced_wrapper_window_2_z_5,induced_wrapper_window_2_y_6
+  instance:window_3 purpose=object_instance primary=induced_instance_window_3
+    nodes=induced_instance_window_3,induced_wrapper_window_3_z_7,induced_wrapper_window_3_y_8
+  instance:window_4 purpose=object_instance primary=induced_instance_window_4
+    nodes=induced_instance_window_4,induced_wrapper_window_4_z_9,induced_wrapper_window_4_y_10
+  instance:window_5 purpose=object_instance primary=induced_instance_window_5
+    nodes=induced_instance_window_5,induced_wrapper_window_5_z_11,induced_wrapper_window_5_y_12
+
+Repeat candidates deferred
+  group=facade_windows axis=x members=window_1,window_2,window_3,window_4,window_5 status=deferred_to_batch_2_5
+
+Grammar statistics
+  source_observations=11
+  represented=11
+  omitted=0
+  splits=20
+  terminals=43
+  empty_terminals=35
+  repeat_nodes=0
+  maximum_depth=8
+  canonical_grammar_bytes=11206
+  validation=true
+  execution_verified=true
+
+Diagnostics
+  INFO trailing_margin_created node=induced_gap_foreground_ground_y_1: Created explicit wrapper trailing_margin interval [0.12, 1.0].
+  INFO wrapper_split_created source=foreground_ground node=induced_zone_foreground: Created y-axis wrapper split for limited source bounds.
+  INFO small_gap_absorbed source=facade_layout: Absorbed leading wrapper margin 0.02 within tolerance.
+  INFO boundary_snapped source=facade_layout: Snapped leading wrapper boundary to parent minimum 0.0.
+  INFO leading_margin_created node=induced_gap_facade_layout_y_2: Created explicit wrapper leading_margin interval [0.0, 0.17000000000000004].
+  INFO supplied_split_axis_used source=facade_layout: Used supplied y-axis structural hint.
+  INFO boundary_snapped source=facade_layout: Snapped adjacent boundary to midpoint 0.30000000000000004.
+  INFO boundary_snapped source=facade_layout: Snapped adjacent boundary to midpoint 0.8200000000000001.
+  INFO leading_margin_created node=induced_gap_facade_base_x_3: Created explicit wrapper leading_margin interval [0.0, 0.02].
+  INFO wrapper_split_created source=facade_base node=induced_wrapper_facade_base_x_2: Created x-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_window_band_x_4: Created explicit wrapper leading_margin interval [0.0, 0.02].
+  INFO supplied_repeat_axis_used source=window_band: Used supplied repeat-group x-axis hint.
+  INFO repeat_candidate_deferred source=facade_windows: Repeat group facade_windows remains independent terminals.
+  INFO wrapper_split_created source=window_1 node=induced_wrapper_window_1_z_3: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_1 node=induced_wrapper_window_1_y_4: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_2 node=induced_wrapper_window_2_z_5: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_2 node=induced_wrapper_window_2_y_6: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_3 node=induced_wrapper_window_3_z_7: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_3 node=induced_wrapper_window_3_y_8: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_4 node=induced_wrapper_window_4_z_9: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_4 node=induced_wrapper_window_4_y_10: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_5 node=induced_wrapper_window_5_z_11: Created z-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_5 node=induced_wrapper_window_5_y_12: Created y-axis wrapper split for limited source bounds.
+  INFO wrapper_split_created source=window_band node=induced_wrapper_window_band_x_13: Created x-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_parapet_x_5: Created explicit wrapper leading_margin interval [0.0, 0.02].
+  INFO wrapper_split_created source=parapet node=induced_wrapper_parapet_x_14: Created x-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_facade_layout_y_6: Created explicit wrapper trailing_margin interval [0.92, 1.0].
+  INFO wrapper_split_created source=facade_layout node=induced_wrapper_facade_layout_y_15: Created y-axis wrapper split for limited source bounds.
+  INFO trailing_margin_created node=induced_gap_facade_layout_x_7: Created explicit wrapper trailing_margin interval [0.59, 1.0].
+  INFO wrapper_split_created source=facade_layout node=induced_zone_midground: Created x-axis wrapper split for limited source bounds.
+  INFO leading_margin_created node=induced_gap_sky_y_8: Created explicit wrapper leading_margin interval [0.0, 0.78].
+  INFO wrapper_split_created source=sky node=induced_zone_background: Created y-axis wrapper split for limited source bounds.
+
+Supplied information
+  - region hierarchy
+  - annotation order and optional order hints
+  - semantic classes and terminal geometry
+  - structural split-axis hints
+  - repeat-group membership and axis hints
+  - lifted proxy bounds
+  - construction tolerances and limits
+
+Derived information
+  - three-zone root split
+  - geometry-selected partition axes
+  - snapped partition boundaries
+  - explicit gap and margin terminals
+  - split weights from final proxy intervals
+  - wrapper splits isolating observation bounds
+  - stable source-to-node mappings
+
+Explicitly not inferred
+  - image segmentation
+  - metric depth
+  - camera calibration
+  - semantic labels beyond supplied annotations
+  - parent hierarchy beyond supplied annotation hierarchy
+  - repeat spacing
+  - RepeatNode structure
+  - stochastic grammar
+  - photorealistic geometry

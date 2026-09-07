@@ -1,0 +1,24 @@
+{
+  "case_definition_version": "0.1",
+  "case_id": "street_03",
+  "expected": {
+    "instance_count": 5,
+    "key_split_boundaries": [0.18, 0.72],
+    "region_count": 6,
+    "repeat_member_ids": ["car_1", "car_2", "car_3", "car_4", "car_5"],
+    "repeat_count": 5,
+    "repeat_decision": "accepted",
+    "required_edit_outcome": "applied",
+    "valid_construction_outcome": true
+  },
+  "family": "urban_street",
+  "parameters": {
+    "partition_axis": "x",
+    "partition_boundaries": [0.18, 0.72],
+    "repeat_axis": "x",
+    "repeat_cross_interval": [0.48, 0.6],
+    "repeat_member_extent": 0.055,
+    "repeat_spacing": 0.035,
+    "repeat_start": 0.23
+  }
+}

@@ -1,0 +1,86 @@
+SceneGrammarKit supplied repeat-group induction
+scene=open_images_reselection_736a482693c18962
+repeat_induction_policy=0.1
+annotation_schema=0.1
+construction_config_schema=0.1
+lifting_policy=0.1
+split_induction_policy=0.1
+grammar_schema=0.1
+execution_policy=0.1
+
+Group decisions
+  group=facade_windows decision=accepted
+    supplied_members=window_1,window_2,window_3,window_4,window_5
+    supplied_axis=x
+    count=5
+    spacing=0.035000000000000003
+    implied_element_extent=0.065000000000000002
+    alignment_error=0
+    size_error=0
+    spacing_error=7.9301644616082604e-16
+    positional_residual=1.1937881985216736e-16
+    reasons=none
+    repeat_node=induced_repeat_facade_windows
+    representative_element=induced_repeat_element_facade_windows
+
+Member mappings
+  group=facade_windows source=window_1 index=0 status=compressed_repeat_instance residual=0
+  group=facade_windows source=window_2 index=1 status=compressed_repeat_instance residual=0
+  group=facade_windows source=window_3 index=2 status=compressed_repeat_instance residual=0
+  group=facade_windows source=window_4 index=3 status=compressed_repeat_instance residual=5.5511151231257827e-17
+  group=facade_windows source=window_5 index=4 status=compressed_repeat_instance residual=0
+
+Compactness diagnostics
+  split_only_nodes=63
+  repeat_nodes_total=32
+  split_only_splits=20
+  repeat_splits=12
+  split_only_terminals=43
+  repeat_terminals=19
+  split_only_repeats=0
+  repeat_repeats=1
+  split_only_bytes=11206
+  repeat_bytes=5419
+  byte_difference=5787
+  byte_ratio=0.48358022487952884
+  symbolic_node_difference=-31
+  primitives_before=8
+  primitives_after=8
+
+Fidelity diagnostics
+  conceptual_count_before=11
+  conceptual_count_after=11
+  maximum_accepted_member_boundary_error=5.5511151231257827e-17
+  maximum_non_repeat_observation_change=0
+  root_bounds_equal=true
+
+Diagnostics
+  INFO repeat_group_evaluated group=facade_windows: Evaluated 5 supplied members.
+  INFO repeat_group_accepted group=facade_windows: Group satisfied configured regularity tolerances.
+  INFO repeat_node_created group=facade_windows: Created count=5 RepeatNode with spacing=0.035.
+
+Supplied information
+  - repeat-group IDs and ordered membership
+  - repeat-axis hints
+  - member semantic classes, geometry, attributes, parents, and depth zones
+  - lifted member proxy bounds
+  - configured repeat tolerances and fallback permissions
+
+Derived information
+  - repeat regularity metrics
+  - median proxy spacing
+  - implied equal-cell element extent
+  - consensus orthogonal proxy bounds
+  - RepeatNode compression decisions
+  - conceptual member mappings and fidelity diagnostics
+  - split-only versus repeat-grammar diagnostic comparison
+
+Explicitly not inferred
+  - repeat groups from image pixels
+  - extra hidden members
+  - occluded instances
+  - physical object size
+  - stochastic repeat rules
+  - learned regularity
+  - metric depth
+  - photorealistic geometry

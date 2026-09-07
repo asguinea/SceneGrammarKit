@@ -1,0 +1,127 @@
+Scene open_images_reselection_736a482693c18962 [schema=0.1, units=normalized]
+Bounds min=(0,0,0) max=(1,1,1)
+root: Split id=induced_scene_depth_zones axis=z
+  child[0] weight=0.2
+    node: Split id=induced_zone_foreground axis=y
+      child[0] weight=0.12
+        node: Terminal id=induced_region_foreground_ground class=foreground geometry=empty
+      child[1] weight=0.88
+        node: Terminal id=induced_gap_foreground_ground_y_1 class=empty_space geometry=empty
+  child[1] weight=0.6
+    node: Split id=induced_zone_midground axis=x
+      child[0] weight=0.59
+        node: Split id=induced_wrapper_facade_layout_y_15 axis=y
+          child[0] weight=0.17
+            node: Terminal id=induced_gap_facade_layout_y_2 class=empty_space geometry=empty
+          child[1] weight=0.75
+            node: Split id=induced_split_facade_layout_y_2 axis=y
+              child[0] weight=0.13
+                node: Split id=induced_wrapper_facade_base_x_2 axis=x
+                  child[0] weight=0.02
+                    node: Terminal id=induced_gap_facade_base_x_3 class=empty_space geometry=empty
+                  child[1] weight=0.57
+                    node: Terminal id=induced_region_facade_base class=facade geometry=box
+              child[1] weight=0.52
+                node: Split id=induced_wrapper_window_band_x_13 axis=x
+                  child[0] weight=0.02
+                    node: Terminal id=induced_gap_window_band_x_4 class=empty_space geometry=empty
+                  child[1] weight=0.57
+                    node: Split id=induced_split_window_band_x_1 axis=x
+                      child[0] weight=0.04
+                        node: Terminal id=induced_region_window_band_fragment_1 class=facade geometry=empty
+                      child[1] weight=0.065
+                        node: Split id=induced_wrapper_window_1_y_4 axis=y
+                          child[0] weight=0.36
+                            node: Terminal id=induced_region_window_band_fragment_2 class=facade geometry=empty
+                          child[1] weight=0.1
+                            node: Split id=induced_wrapper_window_1_z_3 axis=z
+                              child[0] weight=0.381
+                                node: Terminal id=induced_region_window_band_fragment_3 class=facade geometry=empty
+                              child[1] weight=0.03
+                                node: Terminal id=induced_instance_window_1 class=window geometry=box
+                              child[2] weight=0.189
+                                node: Terminal id=induced_region_window_band_fragment_4 class=facade geometry=empty
+                          child[2] weight=0.0600000000000001
+                            node: Terminal id=induced_region_window_band_fragment_5 class=facade geometry=empty
+                      child[2] weight=0.035
+                        node: Terminal id=induced_region_window_band_fragment_6 class=facade geometry=empty
+                      child[3] weight=0.065
+                        node: Split id=induced_wrapper_window_2_y_6 axis=y
+                          child[0] weight=0.36
+                            node: Terminal id=induced_region_window_band_fragment_7 class=facade geometry=empty
+                          child[1] weight=0.1
+                            node: Split id=induced_wrapper_window_2_z_5 axis=z
+                              child[0] weight=0.381
+                                node: Terminal id=induced_region_window_band_fragment_8 class=facade geometry=empty
+                              child[1] weight=0.03
+                                node: Terminal id=induced_instance_window_2 class=window geometry=box
+                              child[2] weight=0.189
+                                node: Terminal id=induced_region_window_band_fragment_9 class=facade geometry=empty
+                          child[2] weight=0.0600000000000001
+                            node: Terminal id=induced_region_window_band_fragment_10 class=facade geometry=empty
+                      child[4] weight=0.035
+                        node: Terminal id=induced_region_window_band_fragment_11 class=facade geometry=empty
+                      child[5] weight=0.065
+                        node: Split id=induced_wrapper_window_3_y_8 axis=y
+                          child[0] weight=0.36
+                            node: Terminal id=induced_region_window_band_fragment_12 class=facade geometry=empty
+                          child[1] weight=0.1
+                            node: Split id=induced_wrapper_window_3_z_7 axis=z
+                              child[0] weight=0.381
+                                node: Terminal id=induced_region_window_band_fragment_13 class=facade geometry=empty
+                              child[1] weight=0.03
+                                node: Terminal id=induced_instance_window_3 class=window geometry=box
+                              child[2] weight=0.189
+                                node: Terminal id=induced_region_window_band_fragment_14 class=facade geometry=empty
+                          child[2] weight=0.0600000000000001
+                            node: Terminal id=induced_region_window_band_fragment_15 class=facade geometry=empty
+                      child[6] weight=0.035
+                        node: Terminal id=induced_region_window_band_fragment_16 class=facade geometry=empty
+                      child[7] weight=0.065
+                        node: Split id=induced_wrapper_window_4_y_10 axis=y
+                          child[0] weight=0.36
+                            node: Terminal id=induced_region_window_band_fragment_17 class=facade geometry=empty
+                          child[1] weight=0.1
+                            node: Split id=induced_wrapper_window_4_z_9 axis=z
+                              child[0] weight=0.381
+                                node: Terminal id=induced_region_window_band_fragment_18 class=facade geometry=empty
+                              child[1] weight=0.03
+                                node: Terminal id=induced_instance_window_4 class=window geometry=box
+                              child[2] weight=0.189
+                                node: Terminal id=induced_region_window_band_fragment_19 class=facade geometry=empty
+                          child[2] weight=0.0600000000000001
+                            node: Terminal id=induced_region_window_band_fragment_20 class=facade geometry=empty
+                      child[8] weight=0.035
+                        node: Terminal id=induced_region_window_band_fragment_21 class=facade geometry=empty
+                      child[9] weight=0.065
+                        node: Split id=induced_wrapper_window_5_y_12 axis=y
+                          child[0] weight=0.36
+                            node: Terminal id=induced_region_window_band_fragment_22 class=facade geometry=empty
+                          child[1] weight=0.1
+                            node: Split id=induced_wrapper_window_5_z_11 axis=z
+                              child[0] weight=0.381
+                                node: Terminal id=induced_region_window_band_fragment_23 class=facade geometry=empty
+                              child[1] weight=0.03
+                                node: Terminal id=induced_instance_window_5 class=window geometry=box
+                              child[2] weight=0.189
+                                node: Terminal id=induced_region_window_band_fragment_24 class=facade geometry=empty
+                          child[2] weight=0.0600000000000001
+                            node: Terminal id=induced_region_window_band_fragment_25 class=facade geometry=empty
+                      child[10] weight=0.0649999999999999
+                        node: Terminal id=induced_region_window_band_fragment_26 class=facade geometry=empty
+              child[2] weight=0.1
+                node: Split id=induced_wrapper_parapet_x_14 axis=x
+                  child[0] weight=0.02
+                    node: Terminal id=induced_gap_parapet_x_5 class=empty_space geometry=empty
+                  child[1] weight=0.57
+                    node: Terminal id=induced_region_parapet class=facade geometry=box
+          child[2] weight=0.08
+            node: Terminal id=induced_gap_facade_layout_y_6 class=empty_space geometry=empty
+      child[1] weight=0.41
+        node: Terminal id=induced_gap_facade_layout_x_7 class=empty_space geometry=empty
+  child[2] weight=0.2
+    node: Split id=induced_zone_background axis=y
+      child[0] weight=0.78
+        node: Terminal id=induced_gap_sky_y_8 class=empty_space geometry=empty
+      child[1] weight=0.22
+        node: Terminal id=induced_region_sky class=sky geometry=plane

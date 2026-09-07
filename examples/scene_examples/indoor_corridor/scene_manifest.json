@@ -1,0 +1,30 @@
+{
+  "manifest_version": "0.1",
+  "scene_key": "indoor_corridor",
+  "display_name": "Indoor Corridor",
+  "grammar_path": "grammar.json",
+  "description": "A depth-oriented passage with floor and ceiling layers, explicit side-wall regions, repeated doors, open corridor volume, and an end wall.",
+  "supported_camera_presets": ["front", "isometric", "top"],
+  "primary_camera": "isometric",
+  "secondary_camera": "top",
+  "primary_render_width": 1200,
+  "primary_render_height": 800,
+  "canonical_edits": [
+    {
+      "edit_key": "corridor_wider",
+      "operation_type": "set_split_child_weight",
+      "parameters": {
+        "split_node_id": "usable_width_layout",
+        "child_node_id": "corridor_passage",
+        "new_weight": 10
+      },
+      "purpose": "Widen the central open passage while narrowing both side-wall regions.",
+      "primary_example_edit": true,
+      "recommended_render_camera": "isometric"
+    }
+  ],
+  "expected_semantic_classes": ["ceiling", "corridor", "door", "ground", "wall"],
+  "expected_split_node_ids": ["corridor_depth_zones", "corridor_vertical_layers", "left_wall_layout", "right_wall_layout", "usable_width_layout"],
+  "expected_repeat_node_ids": ["left_doors", "right_doors"],
+  "known_limitations": ["The corridor is an open-box semantic proxy; repeated doors are solid panels and no perspective camera is modeled."]
+}

@@ -1,0 +1,4 @@
+case_key,image_id,outcome,primary_grammar_type,accepted_repeat_group_count,fallback_repeat_group_count,primary_primitive_count,license_url
+canonical_success,736a482693c18962,success,repeat,1,0,8,https://creativecommons.org/licenses/by/2.0/
+moderate_case,40992cf7a7bbf20e,success,repeat,1,0,15,https://creativecommons.org/licenses/by/2.0/
+limitation_case,692c5c6be088dbf8,degraded_success,split_only,0,0,5,https://creativecommons.org/licenses/by/2.0/

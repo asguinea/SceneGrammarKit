@@ -1,0 +1,109 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "example_repeated_facade",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 0.2]
+  },
+  "root": {
+    "node_id": "facade_vertical_bands",
+    "type": "split",
+    "axis": "y",
+    "children": [
+      {
+        "weight": 2,
+        "node": {
+          "node_id": "lower_base_layout",
+          "type": "split",
+          "axis": "x",
+          "children": [
+            {
+              "weight": 4,
+              "node": {
+                "node_id": "lower_left_facade",
+                "type": "terminal",
+                "semantic_class": "facade",
+                "geometry": "box"
+              }
+            },
+            {
+              "weight": 2,
+              "node": {
+                "node_id": "entrance_door",
+                "type": "terminal",
+                "semantic_class": "door",
+                "geometry": "box"
+              }
+            },
+            {
+              "weight": 4,
+              "node": {
+                "node_id": "lower_right_facade",
+                "type": "terminal",
+                "semantic_class": "facade",
+                "geometry": "box"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "weight": 6,
+        "node": {
+          "node_id": "window_band_layout",
+          "type": "split",
+          "axis": "x",
+          "children": [
+            {
+              "weight": 1,
+              "node": {
+                "node_id": "left_window_pier",
+                "type": "terminal",
+                "semantic_class": "wall",
+                "geometry": "box"
+              }
+            },
+            {
+              "weight": 8,
+              "node": {
+                "node_id": "repeated_windows",
+                "type": "repeat",
+                "axis": "x",
+                "count": 5,
+                "spacing": 0.04,
+                "element": {
+                  "node_id": "window_module",
+                  "type": "terminal",
+                  "semantic_class": "window",
+                  "geometry": "box",
+                  "attributes": {
+                    "role": "glazing_proxy"
+                  }
+                }
+              }
+            },
+            {
+              "weight": 1,
+              "node": {
+                "node_id": "right_window_pier",
+                "type": "terminal",
+                "semantic_class": "wall",
+                "geometry": "box"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "weight": 2,
+        "node": {
+          "node_id": "upper_parapet",
+          "type": "terminal",
+          "semantic_class": "facade",
+          "geometry": "box"
+        }
+      }
+    ]
+  }
+}

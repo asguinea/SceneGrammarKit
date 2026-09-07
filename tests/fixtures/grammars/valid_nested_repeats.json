@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "nested_repeats",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "outer_repeat",
+    "type": "repeat",
+    "axis": "x",
+    "count": 2,
+    "spacing": 0.2,
+    "element": {
+      "node_id": "inner_repeat",
+      "type": "repeat",
+      "axis": "y",
+      "count": 3,
+      "spacing": 0.1,
+      "element": {
+        "node_id": "window",
+        "type": "terminal",
+        "semantic_class": "window",
+        "geometry": "plane"
+      }
+    }
+  }
+}

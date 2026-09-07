@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "deeply_nested",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "repeat_0",
+    "type": "repeat",
+    "axis": "x",
+    "count": 1,
+    "spacing": 0,
+    "element": {
+      "node_id": "repeat_1",
+      "type": "repeat",
+      "axis": "y",
+      "count": 1,
+      "spacing": 0,
+      "element": {
+        "node_id": "repeat_2",
+        "type": "repeat",
+        "axis": "z",
+        "count": 1,
+        "spacing": 0,
+        "element": {
+          "node_id": "repeat_3",
+          "type": "repeat",
+          "axis": "x",
+          "count": 1,
+          "spacing": 0,
+          "element": {
+            "node_id": "deep_terminal",
+            "type": "terminal",
+            "semantic_class": "post",
+            "geometry": "box"
+          }
+        }
+      }
+    }
+  }
+}

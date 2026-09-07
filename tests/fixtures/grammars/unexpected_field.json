@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.1",
+  "scene_id": "unexpected_field",
+  "units": "normalized",
+  "root_bounds": {
+    "min": [0, 0, 0],
+    "max": [1, 1, 1]
+  },
+  "root": {
+    "node_id": "terminal_root",
+    "type": "terminal",
+    "semantic_class": "road",
+    "geometry": "box",
+    "future_extension": true
+  }
+}

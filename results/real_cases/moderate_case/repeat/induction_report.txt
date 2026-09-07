@@ -1,0 +1,86 @@
+SceneGrammarKit supplied repeat-group induction
+scene=open_images_reselection_40992cf7a7bbf20e
+repeat_induction_policy=0.1
+annotation_schema=0.1
+construction_config_schema=0.1
+lifting_policy=0.1
+split_induction_policy=0.1
+grammar_schema=0.1
+execution_policy=0.1
+
+Group decisions
+  group=parked_cars decision=accepted
+    supplied_members=car_1,car_2,car_3,car_4,car_5
+    supplied_axis=x
+    count=5
+    spacing=0.069999999999999965
+    implied_element_extent=0.080000000000000016
+    alignment_error=0
+    size_error=6.9388939039072274e-16
+    spacing_error=5.9476233462061983e-16
+    positional_residual=1.6326809185664068e-16
+    reasons=none
+    repeat_node=induced_repeat_parked_cars
+    representative_element=induced_repeat_element_parked_cars
+
+Member mappings
+  group=parked_cars source=car_1 index=0 status=compressed_repeat_instance residual=1.1102230246251565e-16
+  group=parked_cars source=car_2 index=1 status=compressed_repeat_instance residual=1.1102230246251565e-16
+  group=parked_cars source=car_3 index=2 status=compressed_repeat_instance residual=1.1102230246251565e-16
+  group=parked_cars source=car_4 index=3 status=compressed_repeat_instance residual=1.1102230246251565e-16
+  group=parked_cars source=car_5 index=4 status=compressed_repeat_instance residual=1.1102230246251565e-16
+
+Compactness diagnostics
+  split_only_nodes=62
+  repeat_nodes_total=31
+  split_only_splits=18
+  repeat_splits=10
+  split_only_terminals=44
+  repeat_terminals=20
+  split_only_repeats=0
+  repeat_repeats=1
+  split_only_bytes=11201
+  repeat_bytes=5469
+  byte_difference=5732
+  byte_ratio=0.48825997678778682
+  symbolic_node_difference=-31
+  primitives_before=35
+  primitives_after=15
+
+Fidelity diagnostics
+  conceptual_count_before=11
+  conceptual_count_after=11
+  maximum_accepted_member_boundary_error=1.1102230246251565e-16
+  maximum_non_repeat_observation_change=0
+  root_bounds_equal=true
+
+Diagnostics
+  INFO repeat_group_evaluated group=parked_cars: Evaluated 5 supplied members.
+  INFO repeat_group_accepted group=parked_cars: Group satisfied configured regularity tolerances.
+  INFO repeat_node_created group=parked_cars: Created count=5 RepeatNode with spacing=0.06999999999999997.
+
+Supplied information
+  - repeat-group IDs and ordered membership
+  - repeat-axis hints
+  - member semantic classes, geometry, attributes, parents, and depth zones
+  - lifted member proxy bounds
+  - configured repeat tolerances and fallback permissions
+
+Derived information
+  - repeat regularity metrics
+  - median proxy spacing
+  - implied equal-cell element extent
+  - consensus orthogonal proxy bounds
+  - RepeatNode compression decisions
+  - conceptual member mappings and fidelity diagnostics
+  - split-only versus repeat-grammar diagnostic comparison
+
+Explicitly not inferred
+  - repeat groups from image pixels
+  - extra hidden members
+  - occluded instances
+  - physical object size
+  - stochastic repeat rules
+  - learned regularity
+  - metric depth
+  - photorealistic geometry

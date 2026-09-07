@@ -1,0 +1,76 @@
+SceneGrammarKit coarse lifted observations
+====================================
+Scene: open_images_limitation_case
+Image: 692c5c6be088dbf8
+Image verified: true
+Source pixels used for geometric inference: false
+Root bounds: min=(0,0,0) max=(1,1,1)
+
+Depth-zone intervals
+--------------------
+- foreground: [0, 0.2]
+- midground: [0.2, 0.8]
+- background: [0.8, 1]
+
+Lifting assumptions
+-------------------
+- Coordinates form a non-metric normalized orthographic proxy.
+- Supplied depth-zone labels select configured z intervals.
+- Region proxy depth uses the complete configured zone interval.
+- Instance proxy depth uses the image bottom edge and 5% zone thickness.
+- Polygon proxy bounds use the supplied polygon bounding rectangle.
+- Source-image pixels are verified for provenance but not analyzed.
+
+Observation summary
+-------------------
+- regions=6, instances=0, total=6
+
+Observations
+------------
+- region:road: purpose=terminal_candidate; semantic=road; zone=foreground
+  image_bounds=[0,0.73]-[1,1]
+  world_bounds=min=(0,0,0) max=(1,0.27,0.2)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=none; order_hint=none
+- region:facade_layout: purpose=structural; semantic=facade; zone=midground
+  image_bounds=[0.1,0.05]-[0.96,0.73]
+  world_bounds=min=(0.1,0.27,0.2) max=(0.96,0.95,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=x; order_hint=none
+- region:left_wing: purpose=terminal_candidate; semantic=facade; zone=midground
+  image_bounds=[0.1,0.16]-[0.32,0.73]
+  world_bounds=min=(0.1,0.27,0.2) max=(0.32,0.84,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=facade_layout; repeat_group=none; split_hint=none; order_hint=0
+- region:curved_center: purpose=terminal_candidate; semantic=facade; zone=midground
+  image_bounds=[0.32,0.05]-[0.78,0.73]
+  world_bounds=min=(0.32,0.27,0.2) max=(0.78,0.95,0.8)
+  depth_policy=full_zone_interval; approximation=image_polygon_bounding_box
+  supplied=parent=facade_layout; repeat_group=none; split_hint=none; order_hint=1
+- region:right_wing: purpose=terminal_candidate; semantic=facade; zone=midground
+  image_bounds=[0.78,0.28]-[0.96,0.73]
+  world_bounds=min=(0.78,0.27,0.2) max=(0.96,0.72,0.8)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=facade_layout; repeat_group=none; split_hint=none; order_hint=2
+- region:sky: purpose=terminal_candidate; semantic=sky; zone=background
+  image_bounds=[0,0]-[1,0.3]
+  world_bounds=min=(0,0.7,0.8) max=(1,1,1)
+  depth_policy=full_zone_interval; approximation=rectangle_bounds
+  supplied=parent=none; repeat_group=none; split_hint=none; order_hint=none
+
+Warnings
+--------
+- polygon_bounding_box_proxy [curved_center]: Supplied polygon evidence uses its bounding box for the 3D proxy.
+
+Not inferred
+------------
+- metric depth
+- camera intrinsics
+- camera extrinsics
+- physical object dimensions
+- split hierarchy
+- split boundaries
+- repeat count beyond supplied membership
+- repeat spacing
+- grammar
+- reconstructed mesh

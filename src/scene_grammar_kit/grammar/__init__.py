@@ -1,0 +1,83 @@
+"""Public API for strict SceneGrammarKit grammar models and JSON persistence."""
+
+from scene_grammar_kit.grammar.errors import (
+    GrammarError,
+    GrammarExpansionLimitError,
+    GrammarFileExistsError,
+    GrammarFileNotFoundError,
+    GrammarInspectionError,
+    GrammarIOError,
+    GrammarJSONError,
+    GrammarReadError,
+    GrammarSerializationError,
+    GrammarValidationError,
+    GrammarWriteError,
+)
+from scene_grammar_kit.grammar.inspection import (
+    DEFAULT_EXPANSION_LIMIT,
+    GrammarSummary,
+    grammar_tree_to_text,
+    summarize_grammar,
+)
+from scene_grammar_kit.grammar.models import (
+    SCHEMA_VERSION,
+    Axis,
+    Bounds3D,
+    GeometryType,
+    RepeatNode,
+    SceneGrammar,
+    SplitChild,
+    SplitNode,
+    TerminalNode,
+    Vector3,
+)
+from scene_grammar_kit.grammar.serialization import (
+    grammar_from_json,
+    grammar_to_canonical_json,
+    load_grammar,
+    save_grammar,
+)
+from scene_grammar_kit.grammar.validation import (
+    DEFAULT_MAX_GRAMMAR_DEPTH,
+    ValidationDiagnostic,
+    ValidationReport,
+    ValidationSeverity,
+    validate_grammar,
+)
+
+__all__ = [
+    "SCHEMA_VERSION",
+    "Axis",
+    "Bounds3D",
+    "GeometryType",
+    "DEFAULT_EXPANSION_LIMIT",
+    "DEFAULT_MAX_GRAMMAR_DEPTH",
+    "GrammarError",
+    "GrammarExpansionLimitError",
+    "GrammarFileExistsError",
+    "GrammarFileNotFoundError",
+    "GrammarIOError",
+    "GrammarInspectionError",
+    "GrammarJSONError",
+    "GrammarReadError",
+    "GrammarSerializationError",
+    "GrammarValidationError",
+    "GrammarWriteError",
+    "GrammarSummary",
+    "RepeatNode",
+    "SceneGrammar",
+    "SplitChild",
+    "SplitNode",
+    "TerminalNode",
+    "Vector3",
+    "ValidationDiagnostic",
+    "ValidationReport",
+    "ValidationSeverity",
+    "grammar_from_json",
+    "grammar_to_canonical_json",
+    "grammar_tree_to_text",
+    "load_grammar",
+    "save_grammar",
+    "summarize_grammar",
+    "validate_grammar",
+]

@@ -1,0 +1,24 @@
+{
+  "case_definition_version": "0.1",
+  "case_id": "facade_01",
+  "expected": {
+    "instance_count": 3,
+    "key_split_boundaries": [0.15, 0.85],
+    "region_count": 6,
+    "repeat_member_ids": ["window_1", "window_2", "window_3"],
+    "repeat_count": 3,
+    "repeat_decision": "accepted",
+    "required_edit_outcome": "applied",
+    "valid_construction_outcome": true
+  },
+  "family": "repeated_facade",
+  "parameters": {
+    "partition_axis": "x",
+    "partition_boundaries": [0.15, 0.85],
+    "repeat_axis": "x",
+    "repeat_cross_interval": [0.32, 0.48],
+    "repeat_member_extent": 0.12,
+    "repeat_spacing": 0.07,
+    "repeat_start": 0.24
+  }
+}
