@@ -31,7 +31,7 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "Pillow>=10,<13",
+    "Pillow>=10,<14",
     "trimesh>=4,<5",
 ]
 
